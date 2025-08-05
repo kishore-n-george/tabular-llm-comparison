@@ -1,0 +1,199 @@
+2025-07-24 03:07:22,298 - This goes to output.log
+2025-07-24 03:07:22,298 - 🔬 Enhanced Ablation Studies Framework Loaded
+2025-07-24 03:07:22,298 - Ready to perform advanced ablation analysis on TabICL and TabPFN models
+2025-07-24 03:07:22,298 - 🔍 Verifying Required Resources:
+2025-07-24 03:07:22,299 -    ✅ X_train_scaled: shape (7891, 17)
+2025-07-24 03:07:22,299 -    ✅ X_test_scaled: shape (2466, 17)
+2025-07-24 03:07:22,299 -    ✅ y_train: length 7891
+2025-07-24 03:07:22,299 -    ✅ y_test: length 2466
+2025-07-24 03:07:22,299 -    ✅ feature_names: 17 features
+2025-07-24 03:07:22,299 -    ✅ models: ['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer']
+2025-07-24 03:07:22,299 -    ✅ model_names: available
+2025-07-24 03:07:22,299 - 
+📊 Models available for enhanced ablation studies: dict_keys(['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer'])
+2025-07-24 03:07:22,299 - 🚀 INITIALIZING ENHANCED ABLATION STUDIES
+2025-07-24 03:07:22,299 - ================================================================================
+2025-07-24 03:07:22,299 - 
+🔬 Starting enhanced ablation analysis...
+2025-07-24 03:07:22,299 - This will perform model-specific ablations for TabICL and TabPFN
+2025-07-24 03:07:22,299 - Expected duration: 5-15 minutes depending on hardware
+2025-07-25 04:34:11,457 - This goes to output.log
+2025-07-25 04:34:12,787 - ✅ Section 2 results loaded successfully!
+2025-07-25 04:34:12,788 - Models available: ['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer']
+2025-07-25 04:34:12,788 - Features: 17
+2025-07-25 04:34:12,788 - Classes: 2
+2025-07-25 04:34:12,788 - Test samples: 2,466
+2025-07-25 04:34:12,788 - 
+📋 Feature Names:
+2025-07-25 04:34:12,788 -     1. Administrative
+2025-07-25 04:34:12,788 -     2. Administrative_Duration
+2025-07-25 04:34:12,788 -     3. Informational
+2025-07-25 04:34:12,788 -     4. Informational_Duration
+2025-07-25 04:34:12,788 -     5. ProductRelated
+2025-07-25 04:34:12,788 -     6. ProductRelated_Duration
+2025-07-25 04:34:12,788 -     7. BounceRates
+2025-07-25 04:34:12,788 -     8. ExitRates
+2025-07-25 04:34:12,788 -     9. PageValues
+2025-07-25 04:34:12,788 -    10. SpecialDay
+2025-07-25 04:34:12,788 -    11. Month
+2025-07-25 04:34:12,788 -    12. OperatingSystems
+2025-07-25 04:34:12,788 -    13. Browser
+2025-07-25 04:34:12,788 -    14. Region
+2025-07-25 04:34:12,788 -    15. TrafficType
+2025-07-25 04:34:12,788 -    16. VisitorType
+2025-07-25 04:34:12,788 -    17. Weekend
+2025-07-25 04:34:12,788 - 🔬 Enhanced Ablation Studies Framework Loaded
+2025-07-25 04:34:12,788 - Ready to perform advanced ablation analysis on TabICL and TabPFN models
+2025-07-25 04:34:12,788 - 🔍 Verifying Required Resources:
+2025-07-25 04:34:12,788 -    ✅ X_train_scaled: shape (7891, 17)
+2025-07-25 04:34:12,788 -    ✅ X_test_scaled: shape (2466, 17)
+2025-07-25 04:34:12,788 -    ✅ y_train: length 7891
+2025-07-25 04:34:12,788 -    ✅ y_test: length 2466
+2025-07-25 04:34:12,788 -    ✅ feature_names: 17 features
+2025-07-25 04:34:12,789 -    ✅ models: ['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer']
+2025-07-25 04:34:12,789 -    ✅ model_names: available
+2025-07-25 04:34:12,789 - 
+📊 Models available for enhanced ablation studies: dict_keys(['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer'])
+2025-07-25 04:34:12,789 - 🚀 INITIALIZING ENHANCED ABLATION STUDIES
+2025-07-25 04:34:12,789 - ================================================================================
+2025-07-25 04:34:12,789 - 
+🔬 Starting enhanced ablation analysis...
+2025-07-25 04:34:12,789 - This will perform model-specific ablations for TabICL and TabPFN
+2025-07-25 04:34:12,789 - Expected duration: 5-15 minutes depending on hardware
+2025-07-25 05:33:40,004 - 
+📊 ENHANCED ABLATION STUDY SUMMARY
+2025-07-25 05:33:40,004 - ================================================================================
+2025-07-25 05:33:40,010 -             Model  Accuracy  F1_Score  Precision  Recall     AUC  Train_Time  Inference_Time Most_Important_Feature  Feature_Importance_Score  Robustness_Score
+0         XGBoost    0.8974    0.6307     0.7129  0.5654  0.9212      0.1962          0.0051             PageValues                    0.5900            0.7683
+1       TabPFN v2    0.9011    0.6494     0.7197  0.5916  0.9326      0.6777          9.1577             PageValues                    0.8040            0.7678
+2          TabICL    0.8994    0.6427     0.7147  0.5838  0.9340      0.8418         11.6627             PageValues                    0.7389            0.8463
+3  FT-Transformer    0.8958    0.6465     0.6812  0.6152  0.9220      0.0000          0.0686                    NaN                       NaN            0.8257
+2025-07-25 05:33:40,012 - 
+💾 Results saved to 'enhanced_ablation_summary.csv'
+2025-07-25 05:33:40,012 - 📈 Generating Enhanced Ablation Dashboard...
+2025-07-25 06:25:45,574 - This goes to output.log
+2025-07-25 06:25:46,779 - ✅ Section 2 results loaded successfully!
+2025-07-25 06:25:46,779 - Models available: ['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer']
+2025-07-25 06:25:46,779 - Features: 17
+2025-07-25 06:25:46,779 - Classes: 2
+2025-07-25 06:25:46,779 - Test samples: 2,466
+2025-07-25 06:25:46,779 - 
+📋 Feature Names:
+2025-07-25 06:25:46,779 -     1. Administrative
+2025-07-25 06:25:46,779 -     2. Administrative_Duration
+2025-07-25 06:25:46,779 -     3. Informational
+2025-07-25 06:25:46,779 -     4. Informational_Duration
+2025-07-25 06:25:46,779 -     5. ProductRelated
+2025-07-25 06:25:46,780 -     6. ProductRelated_Duration
+2025-07-25 06:25:46,780 -     7. BounceRates
+2025-07-25 06:25:46,780 -     8. ExitRates
+2025-07-25 06:25:46,780 -     9. PageValues
+2025-07-25 06:25:46,780 -    10. SpecialDay
+2025-07-25 06:25:46,780 -    11. Month
+2025-07-25 06:25:46,780 -    12. OperatingSystems
+2025-07-25 06:25:46,780 -    13. Browser
+2025-07-25 06:25:46,780 -    14. Region
+2025-07-25 06:25:46,780 -    15. TrafficType
+2025-07-25 06:25:46,780 -    16. VisitorType
+2025-07-25 06:25:46,780 -    17. Weekend
+2025-07-25 06:25:46,780 - 🔬 Enhanced Ablation Studies Framework Loaded
+2025-07-25 06:25:46,780 - Ready to perform advanced ablation analysis on TabICL and TabPFN models
+2025-07-25 06:25:46,780 - 🔍 Verifying Required Resources:
+2025-07-25 06:25:46,780 -    ✅ X_train_scaled: shape (7891, 17)
+2025-07-25 06:25:46,780 -    ✅ X_test_scaled: shape (2466, 17)
+2025-07-25 06:25:46,780 -    ✅ y_train: length 7891
+2025-07-25 06:25:46,780 -    ✅ y_test: length 2466
+2025-07-25 06:25:46,780 -    ✅ feature_names: 17 features
+2025-07-25 06:25:46,780 -    ✅ models: ['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer']
+2025-07-25 06:25:46,781 -    ✅ model_names: available
+2025-07-25 06:25:46,781 - 
+📊 Models available for enhanced ablation studies: dict_keys(['XGBoost', 'TabPFN v2', 'TabICL', 'FT-Transformer'])
+2025-07-25 06:25:46,781 - 🚀 INITIALIZING ENHANCED ABLATION STUDIES
+2025-07-25 06:25:46,781 - ================================================================================
+2025-07-25 06:25:46,781 - 
+🔬 Starting enhanced ablation analysis...
+2025-07-25 06:25:46,781 - This will perform model-specific ablations for TabICL and TabPFN
+2025-07-25 06:25:46,781 - Expected duration: 5-15 minutes depending on hardware
+2025-07-25 07:25:55,205 - 
+📊 ENHANCED ABLATION STUDY SUMMARY
+2025-07-25 07:25:55,206 - ================================================================================
+2025-07-25 07:25:55,210 -             Model  Accuracy  F1_Score  Precision  Recall     AUC  Train_Time  Inference_Time Most_Important_Feature  Feature_Importance_Score  Robustness_Score
+0         XGBoost    0.8974    0.6307     0.7129  0.5654  0.9212      0.1622          0.0038             PageValues                    0.5900            0.7760
+1       TabPFN v2    0.9011    0.6494     0.7197  0.5916  0.9326      0.4875          7.9770             PageValues                    0.8040            0.7652
+2          TabICL    0.8994    0.6427     0.7147  0.5838  0.9340      0.5100         11.6418             PageValues                    0.7389            0.8356
+3  FT-Transformer    0.8958    0.6465     0.6812  0.6152  0.9220      0.0000          0.0566                    NaN                       NaN            0.8236
+2025-07-25 07:25:55,212 - 
+💾 Results saved to 'enhanced_ablation_summary.csv'
+2025-07-25 07:25:55,212 - 📈 Generating Enhanced Ablation Dashboard...
+2025-07-25 07:25:57,133 - 
+🔬 TABPFN ENHANCED ABLATION ANALYSIS
+2025-07-25 07:25:57,133 - ================================================================================
+2025-07-25 07:25:57,133 - 
+📏 Context Size Optimization Results:
+2025-07-25 07:25:57,136 -    context_size  actual_samples  f1_score  accuracy  train_time
+0           100             100    0.5065    0.8775      0.1173
+1           500             500    0.6046    0.8950      0.1607
+2          1000            1000    0.6350    0.8942      0.1788
+3          1500            1500    0.6282    0.8954      0.1924
+4          2000            2000    0.6566    0.8990      0.1953
+2025-07-25 07:25:57,316 - 
+🎯 TabPFN Context Size Insights:
+2025-07-25 07:25:57,316 -    Optimal for F1: Context size 2000 (F1: 0.6566)
+2025-07-25 07:25:57,316 -    Optimal for Efficiency: Context size 100 (Efficiency: 4.3201)
+2025-07-25 07:25:57,316 -    Performance Range: 0.5065 - 0.6566
+2025-07-25 07:25:57,316 -    Time Range: 0.12s - 0.20s
+2025-07-25 07:25:57,316 - 
+🎯 TABICL ENHANCED ABLATION ANALYSIS
+2025-07-25 07:25:57,316 - ================================================================================
+2025-07-25 07:25:57,317 - 
+📝 Context Examples Optimization Results:
+2025-07-25 07:25:57,319 -    context_examples  actual_examples  f1_score  accuracy  train_time
+0                16               16    0.3978    0.8637      0.3940
+1                32               32    0.0602    0.8479      0.4061
+2                64               64    0.4225    0.8670      0.4204
+3               128              128    0.5232    0.8706      0.4087
+4               256              256    0.5759    0.8889      0.4018
+2025-07-25 07:25:57,475 - 
+🎯 TabICL Context Examples Insights:
+2025-07-25 07:25:57,475 -    Optimal for F1: 256 examples (F1: 0.5759)
+2025-07-25 07:25:57,475 -    Most Efficient: 16 examples (Efficiency: 0.0249)
+2025-07-25 07:25:57,475 -    Performance Range: 0.0602 - 0.5759
+2025-07-25 07:25:57,475 -    Time Range: 0.39s - 0.42s
+2025-07-25 07:25:57,476 - 
+🎯 CROSS-MODEL FEATURE IMPORTANCE ANALYSIS
+2025-07-25 07:25:57,476 - ================================================================================
+2025-07-25 07:25:57,478 - 
+Feature Importance Comparison (Relative Importance):
+2025-07-25 07:25:57,480 -                          XGBoost  TabPFN v2  TabICL  FT-Transformer
+Administrative           -0.0189    -0.0147 -0.0314               0
+Administrative_Duration  -0.0099    -0.0118 -0.0104               0
+BounceRates              -0.0005     0.0170 -0.0165               0
+Browser                  -0.0101    -0.0060  0.0075               0
+ExitRates                -0.0161     0.0002 -0.0137               0
+Informational            -0.0203     0.0109 -0.0046               0
+Informational_Duration   -0.0200     0.0017 -0.0107               0
+Month                     0.0425     0.0535  0.0557               0
+OperatingSystems          0.0019    -0.0104  0.0045               0
+PageValues                0.5900     0.8040  0.7389               0
+ProductRelated           -0.0163    -0.0076 -0.0030               0
+ProductRelated_Duration   0.0055     0.0201  0.0110               0
+Region                    0.0101    -0.0118  0.0048               0
+SpecialDay               -0.0234    -0.0030 -0.0061               0
+TrafficType               0.0061    -0.0119  0.0048               0
+VisitorType              -0.0143    -0.0029  0.0092               0
+Weekend                   0.0058     0.0030  0.0137               0
+2025-07-25 07:25:57,644 - 
+🏆 TOP FEATURES CONSENSUS:
+2025-07-25 07:25:57,645 - 
+Top 5 Most Important Features (Average Across Models):
+2025-07-25 07:25:57,645 -    1. PageValues: 0.5332
+2025-07-25 07:25:57,645 -    2. Month: 0.0379
+2025-07-25 07:25:57,646 -    3. ProductRelated_Duration: 0.0092
+2025-07-25 07:25:57,646 -    4. Weekend: 0.0056
+2025-07-25 07:25:57,646 -    5. Region: 0.0008
+2025-07-25 07:25:57,646 - 
+Model Agreement on Top Features:
+2025-07-25 07:25:57,647 -    XGBoost: PageValues, Month, Region
+2025-07-25 07:25:57,648 -    TabPFN v2: PageValues, Month, ProductRelated_Duration
+2025-07-25 07:25:57,648 -    TabICL: PageValues, Month, Weekend
+2025-07-25 07:25:57,649 -    FT-Transformer: Administrative, Administrative_Duration, BounceRates

@@ -1,0 +1,140 @@
+2025-07-31 07:49:04,593 - INFO - Starting Complete SAINT Training Pipeline
+2025-07-31 07:49:04,593 - INFO - Using device: cuda
+2025-07-31 07:49:07,827 - INFO - Starting SAINT training...
+2025-07-31 07:49:14,247 - INFO - Epoch   1/100 | Train Loss: 68086.3313 | Val Loss: 39772.6196 | Val R²: 0.0924 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:49:19,883 - INFO - Epoch   2/100 | Train Loss: 61522.5645 | Val Loss: 37583.0372 | Val R²: 0.1424 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:49:39,386 - INFO - Starting Complete SAINT Training Pipeline
+2025-07-31 07:49:39,387 - INFO - Using device: cuda
+2025-07-31 07:49:40,776 - INFO - Starting SAINT training...
+2025-07-31 07:49:46,733 - INFO - Epoch   1/100 | Train Loss: 68086.3313 | Val Loss: 39772.6196 | Val R²: 0.0924 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:49:52,398 - INFO - Epoch   2/100 | Train Loss: 61522.5645 | Val Loss: 37583.0372 | Val R²: 0.1424 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:49:58,081 - INFO - Epoch   3/100 | Train Loss: 60494.6518 | Val Loss: 37504.8225 | Val R²: 0.1442 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:50:03,768 - INFO - Epoch   4/100 | Train Loss: 60255.3101 | Val Loss: 36805.3818 | Val R²: 0.1601 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:50:09,456 - INFO - Epoch   5/100 | Train Loss: 59945.8913 | Val Loss: 36615.0013 | Val R²: 0.1645 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:50:38,079 - INFO - Epoch  10/100 | Train Loss: 59417.9228 | Val Loss: 36052.9978 | Val R²: 0.1773 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:51:35,261 - INFO - Epoch  20/100 | Train Loss: 58150.3246 | Val Loss: 35345.9712 | Val R²: 0.1934 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:52:32,681 - INFO - Epoch  30/100 | Train Loss: 57123.2104 | Val Loss: 34692.9385 | Val R²: 0.2083 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 07:53:30,133 - INFO - Epoch  40/100 | Train Loss: 55963.1452 | Val Loss: 33934.2516 | Val R²: 0.2256 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 07:54:27,608 - INFO - Epoch  50/100 | Train Loss: 55208.7144 | Val Loss: 33684.4396 | Val R²: 0.2313 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 07:55:25,059 - INFO - Epoch  60/100 | Train Loss: 53067.5767 | Val Loss: 33160.9929 | Val R²: 0.2433 | LR: 1.00e-04 | Patience: 5/15
+2025-07-31 07:56:22,918 - INFO - Epoch  70/100 | Train Loss: 51285.6284 | Val Loss: 33154.2599 | Val R²: 0.2434 | LR: 1.00e-04 | Patience: 6/15
+2025-07-31 07:57:15,083 - INFO - 
+⏹️ Early stopping triggered at epoch 79
+2025-07-31 07:57:15,083 - INFO - Best validation loss: 30048.2342 at epoch 64
+2025-07-31 07:57:15,085 - INFO - 
+🏁 Training completed in 454.31 seconds
+2025-07-31 07:57:15,085 - INFO - Best validation loss: 30048.2342
+2025-07-31 07:57:15,085 - INFO - Final validation R²: 0.3143
+2025-07-31 07:57:15,086 - INFO - Evaluating trained SAINT model...
+2025-07-31 07:57:15,545 - INFO - 📊 Test Set Performance:
+   R² Score: 0.1905
+   RMSE: 180.0234
+   MAE: 60.4266
+   MSE: 32408.4258
+   MAPE: 0.3868%
+   Explained Variance: 0.1933
+2025-07-31 07:57:18,889 - INFO - Saving results and model...
+2025-07-31 07:57:18,986 - INFO - ✅ Results saved:
+   - Training history: ./Section2_Model_Training/saint_training_history.csv
+   - Evaluation metrics: ./Section2_Model_Training/saint_evaluation_metrics.csv
+   - Predictions: ./Section2_Model_Training/saint_predictions.csv
+   - Model checkpoint: ./Section2_Model_Training/saint_model.pth
+   - Model pickle: ./Section2_Model_Training/saint_model.pkl
+   - Training plots: ./Section2_Model_Training/SAINT_training_history.png
+   - Evaluation plots: ./Section2_Model_Training/SAINT_evaluation_results.png
+   - Training log: ./Section2_Model_Training/saint_training.log
+2025-07-31 07:57:18,987 - INFO - SAINT training pipeline completed successfully!
+2025-07-31 07:57:18,987 - INFO - Final R² Score: 0.1905
+2025-07-31 07:57:18,987 - INFO - Final RMSE: 180.0234
+2025-07-31 07:57:18,987 - INFO - Training Time: 454.31 seconds
+2025-07-31 09:06:39,638 - INFO - Starting Complete SAINT Training Pipeline with Enhanced Data
+2025-07-31 09:06:39,639 - INFO - Using device: cuda
+2025-07-31 09:06:41,111 - INFO - Starting SAINT training...
+2025-07-31 09:06:47,116 - INFO - Epoch   1/100 | Train Loss: 68086.3313 | Val Loss: 39772.6196 | Val R²: 0.0924 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:06:52,822 - INFO - Epoch   2/100 | Train Loss: 61522.5645 | Val Loss: 37583.0372 | Val R²: 0.1424 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:06:58,538 - INFO - Epoch   3/100 | Train Loss: 60494.6518 | Val Loss: 37504.8225 | Val R²: 0.1442 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:07:04,263 - INFO - Epoch   4/100 | Train Loss: 60255.3101 | Val Loss: 36805.3818 | Val R²: 0.1601 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:07:09,993 - INFO - Epoch   5/100 | Train Loss: 59945.8913 | Val Loss: 36615.0013 | Val R²: 0.1645 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:07:38,942 - INFO - Epoch  10/100 | Train Loss: 59417.9228 | Val Loss: 36052.9978 | Val R²: 0.1773 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:08:36,776 - INFO - Epoch  20/100 | Train Loss: 58150.3246 | Val Loss: 35345.9712 | Val R²: 0.1934 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:09:34,874 - INFO - Epoch  30/100 | Train Loss: 57123.2104 | Val Loss: 34692.9385 | Val R²: 0.2083 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 09:10:33,029 - INFO - Epoch  40/100 | Train Loss: 55963.1452 | Val Loss: 33934.2516 | Val R²: 0.2256 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 09:11:31,170 - INFO - Epoch  50/100 | Train Loss: 55208.7144 | Val Loss: 33684.4396 | Val R²: 0.2313 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 09:12:29,027 - INFO - Epoch  60/100 | Train Loss: 53067.5767 | Val Loss: 33160.9929 | Val R²: 0.2433 | LR: 1.00e-04 | Patience: 5/15
+2025-07-31 09:13:26,844 - INFO - Epoch  70/100 | Train Loss: 51285.6284 | Val Loss: 33154.2599 | Val R²: 0.2434 | LR: 1.00e-04 | Patience: 6/15
+2025-07-31 09:14:18,975 - INFO - 
+⏹️ Early stopping triggered at epoch 79
+2025-07-31 09:14:18,975 - INFO - Best validation loss: 30048.2342 at epoch 64
+2025-07-31 09:14:18,977 - INFO - 
+🏁 Training completed in 457.86 seconds
+2025-07-31 09:14:18,977 - INFO - Best validation loss: 30048.2342
+2025-07-31 09:14:18,977 - INFO - Final validation R²: 0.3143
+2025-07-31 09:14:18,977 - INFO - Evaluating trained SAINT model...
+2025-07-31 09:14:19,437 - INFO - 📊 Test Set Performance:
+   R² Score: 0.1905
+   RMSE: 180.0234
+   MAE: 60.4266
+   MSE: 32408.4258
+   MAPE: 0.3868%
+   Explained Variance: 0.1933
+2025-07-31 09:14:22,744 - INFO - Saving results and model...
+2025-07-31 09:14:22,855 - INFO - ✅ Results saved:
+   - Training history: ./Section2_Model_Training/saint_training_history.csv
+   - Evaluation metrics: ./Section2_Model_Training/saint_evaluation_metrics.csv
+   - Predictions: ./Section2_Model_Training/saint_predictions.csv
+   - Model checkpoint: ./Section2_Model_Training/saint_model.pth
+   - Model pickle: ./Section2_Model_Training/saint_model.pkl
+   - Training plots: ./Section2_Model_Training/SAINT_training_history.png
+   - Evaluation plots: ./Section2_Model_Training/SAINT_evaluation_results.png
+   - Training log: ./Section2_Model_Training/saint_training.log
+2025-07-31 09:14:22,855 - INFO - SAINT training pipeline completed successfully!
+2025-07-31 09:14:22,855 - INFO - Final R² Score: 0.1905
+2025-07-31 09:14:22,855 - INFO - Final RMSE: 180.0234
+2025-07-31 09:14:22,855 - INFO - Training Time: 457.86 seconds
+2025-07-31 10:11:44,653 - INFO - Starting Complete SAINT Training Pipeline with Enhanced Data
+2025-07-31 10:11:44,653 - INFO - Using device: cuda
+2025-07-31 10:11:46,161 - INFO - Starting SAINT training...
+2025-07-31 10:14:00,178 - INFO - Starting Complete SAINT Training Pipeline with Enhanced Data
+2025-07-31 10:14:00,178 - INFO - Using device: cuda
+2025-07-31 10:14:01,623 - INFO - Starting SAINT training...
+2025-07-31 10:14:17,713 - INFO - Epoch   1/100 | Train Loss: 311159778408.2983 | Val Loss: 13521529282.6019 | Val R²: -39327254110.1505 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 10:14:33,560 - INFO - Epoch   2/100 | Train Loss: 47327753670.3819 | Val Loss: 25111545075.6942 | Val R²: -73036714889.5301 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 10:14:49,432 - INFO - Epoch   3/100 | Train Loss: 18488538970.5906 | Val Loss: 3469638221.2304 | Val R²: -10091413437.7257 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 10:15:05,325 - INFO - Epoch   4/100 | Train Loss: 15545466022.3621 | Val Loss: 2876535279.5050 | Val R²: -8366378465.6673 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 10:15:21,235 - INFO - Epoch   5/100 | Train Loss: 7713603415.6620 | Val Loss: 7382534937.6262 | Val R²: -21472040363.2343 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 10:16:40,860 - INFO - Epoch  10/100 | Train Loss: 829393561.7428 | Val Loss: 44750632.7630 | Val R²: -130156840.4584 | LR: 1.00e-04 | Patience: 0/15
+2025-07-31 10:19:19,981 - INFO - Epoch  20/100 | Train Loss: 92290864.3883 | Val Loss: 2616847.6019 | Val R²: -7611077.9224 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 10:21:58,635 - INFO - Epoch  30/100 | Train Loss: 21313372.9462 | Val Loss: 1362656.8906 | Val R²: -3963275.2164 | LR: 1.00e-04 | Patience: 1/15
+2025-07-31 10:24:37,632 - INFO - Epoch  40/100 | Train Loss: 4195412.6803 | Val Loss: 170406.9048 | Val R²: -495626.0489 | LR: 1.00e-04 | Patience: 3/15
+2025-07-31 10:27:16,824 - INFO - Epoch  50/100 | Train Loss: 4491276.4784 | Val Loss: 188683.5546 | Val R²: -548783.5183 | LR: 1.00e-04 | Patience: 2/15
+2025-07-31 10:29:55,926 - INFO - Epoch  60/100 | Train Loss: 2732229.5388 | Val Loss: 6260582.6746 | Val R²: -18208851.8493 | LR: 1.00e-04 | Patience: 2/15
+2025-07-31 10:32:34,814 - INFO - Epoch  70/100 | Train Loss: 1593201.8953 | Val Loss: 89788.2490 | Val R²: -261147.3653 | LR: 1.00e-04 | Patience: 2/15
+2025-07-31 10:35:13,679 - INFO - Epoch  80/100 | Train Loss: 9692991.3738 | Val Loss: 3671.2715 | Val R²: -10676.8629 | LR: 5.00e-05 | Patience: 0/15
+2025-07-31 10:37:52,759 - INFO - Epoch  90/100 | Train Loss: 109973.6080 | Val Loss: 11916.4839 | Val R²: -34657.9947 | LR: 5.00e-05 | Patience: 8/15
+2025-07-31 10:40:32,169 - INFO - Epoch 100/100 | Train Loss: 2493.5978 | Val Loss: 2173.0894 | Val R²: -6319.4121 | LR: 2.50e-05 | Patience: 1/15
+2025-07-31 10:40:32,172 - INFO - 
+🏁 Training completed in 1590.55 seconds
+2025-07-31 10:40:32,172 - INFO - Best validation loss: 1089.9546
+2025-07-31 10:40:32,172 - INFO - Final validation R²: -3169.1239
+2025-07-31 10:40:32,172 - INFO - Evaluating trained SAINT model...
+2025-07-31 10:40:33,558 - INFO - 📊 Test Set Performance:
+   R² Score: -5205.6859
+   RMSE: 42.4570
+   MAE: 2.2041
+   MSE: 1802.5966
+   MAPE: 0.5045%
+   Explained Variance: -5201.5620
+2025-07-31 10:40:36,694 - INFO - Saving results and model...
+2025-07-31 10:40:36,805 - INFO - ✅ Results saved:
+   - Training history: ./Section2_Model_Training/saint_training_history.csv
+   - Evaluation metrics: ./Section2_Model_Training/saint_evaluation_metrics.csv
+   - Predictions: ./Section2_Model_Training/saint_predictions.csv
+   - Model checkpoint: ./Section2_Model_Training/saint_model.pth
+   - Model pickle: ./Section2_Model_Training/saint_model.pkl
+   - Training plots: ./Section2_Model_Training/SAINT_training_history.png
+   - Evaluation plots: ./Section2_Model_Training/SAINT_evaluation_results.png
+   - Training log: ./Section2_Model_Training/saint_training.log
+2025-07-31 10:40:36,805 - INFO - SAINT training pipeline completed successfully!
+2025-07-31 10:40:36,805 - INFO - Final R² Score: -5205.6859
+2025-07-31 10:40:36,805 - INFO - Final RMSE: 42.4570
+2025-07-31 10:40:36,805 - INFO - Training Time: 1590.55 seconds

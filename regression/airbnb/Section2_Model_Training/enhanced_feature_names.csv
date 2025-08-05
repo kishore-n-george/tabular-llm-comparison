@@ -1,0 +1,44 @@
+feature_names
+name
+host_name
+neighbourhood_group
+neighbourhood
+latitude
+longitude
+room_type
+minimum_nights
+number_of_reviews
+last_review
+reviews_per_month
+calculated_host_listings_count
+availability_365
+latitude_x_longitude
+latitude_div_longitude
+latitude_x_minimum_nights
+latitude_div_minimum_nights
+latitude_x_number_of_reviews
+latitude_div_number_of_reviews
+longitude_x_minimum_nights
+longitude_div_minimum_nights
+longitude_x_number_of_reviews
+longitude_div_number_of_reviews
+minimum_nights_x_number_of_reviews
+minimum_nights_div_number_of_reviews
+latitude_binned
+longitude_binned
+minimum_nights_binned
+name
+host_name
+neighbourhood_group
+neighbourhood
+latitude
+name host_name
+name neighbourhood_group
+name neighbourhood
+name latitude
+host_name neighbourhood_group
+host_name neighbourhood
+host_name latitude
+neighbourhood_group neighbourhood
+neighbourhood_group latitude
+neighbourhood latitude

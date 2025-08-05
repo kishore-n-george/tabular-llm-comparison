@@ -1,0 +1,515 @@
+2025-07-28 15:10:10,918 - INFO - 🚀 Enhanced XGBoost Training with Advanced Preprocessing
+2025-07-28 15:10:10,918 - INFO - Dataset: Airbnb Dataset
+2025-07-28 15:10:10,918 - INFO - Task: Regression - Predicting Airbnb listing prices
+2025-07-28 15:10:10,921 - INFO - ✅ Base preprocessed data loaded successfully!
+2025-07-28 15:10:10,921 - INFO - 
+🔧 XGBoost-Specific Data Preprocessing
+2025-07-28 15:10:10,922 - INFO - ============================================================
+2025-07-28 15:10:10,922 - INFO - 1. Outlier Detection and Handling
+2025-07-28 15:10:11,510 - INFO -    • Removed 2263 outliers (7.2%)
+2025-07-28 15:10:11,510 - INFO - 2. Target Variable Transformation
+2025-07-28 15:10:11,511 - INFO -    • Original target skewness: 1.426
+2025-07-28 15:10:11,616 - INFO -    • Applied boxcox transformation
+2025-07-28 15:10:11,616 - INFO -    • New target skewness: 0.004
+2025-07-28 15:10:11,617 - INFO - 3. Advanced Feature Scaling (Robust Scaler)
+2025-07-28 15:10:11,641 - INFO -    • Applied RobustScaler (median-based scaling)
+2025-07-28 15:10:11,641 - INFO - 4. Feature Engineering
+2025-07-28 15:10:11,641 - INFO -    • Creating polynomial features for top 5 features
+2025-07-28 15:10:11,656 - INFO -    • Creating statistical features
+2025-07-28 15:10:11,675 - INFO -    • Creating binned features
+2025-07-28 15:10:11,721 - INFO -    • Created 30 new features
+2025-07-28 15:10:11,721 - INFO - 5. Feature Selection
+2025-07-28 15:10:19,459 - INFO -    • Selected 43 features using mutual information
+2025-07-28 15:10:19,459 - INFO - ✅ Enhanced preprocessing completed!
+2025-07-28 15:10:19,459 - INFO -    • Original features: 13
+2025-07-28 15:10:19,459 - INFO -    • Engineered features: 43
+2025-07-28 15:10:19,459 - INFO -    • Selected features: 43
+2025-07-28 15:10:19,459 - INFO -    • Training samples: 29022 (removed 2263 outliers)
+2025-07-28 15:10:19,459 - INFO - 
+🏗️ Training Baseline XGBoost Model
+2025-07-28 15:10:19,459 - INFO - ==================================================
+2025-07-28 15:10:20,560 - INFO - ✅ Baseline model trained in 1.10s
+2025-07-28 15:10:20,560 - INFO - 
+🎯 Hyperparameter Tuning
+2025-07-28 15:10:20,561 - INFO - ==================================================
+2025-07-28 15:10:20,561 - INFO - 1. Randomized Search (100 iterations)
+2025-07-28 15:13:43,611 - INFO - 🚀 Enhanced XGBoost Training with Advanced Preprocessing
+2025-07-28 15:13:43,611 - INFO - Dataset: Airbnb Dataset
+2025-07-28 15:13:43,612 - INFO - Task: Regression - Predicting Airbnb listing prices
+2025-07-28 15:13:43,615 - INFO - ✅ Base preprocessed data loaded successfully!
+2025-07-28 15:13:43,615 - INFO - 
+🔧 XGBoost-Specific Data Preprocessing
+2025-07-28 15:13:43,615 - INFO - ============================================================
+2025-07-28 15:13:43,615 - INFO - 1. Outlier Detection and Handling
+2025-07-28 15:13:44,218 - INFO -    • Removed 2263 outliers (7.2%)
+2025-07-28 15:13:44,218 - INFO - 2. Target Variable Transformation
+2025-07-28 15:13:44,219 - INFO -    • Original target skewness: 1.426
+2025-07-28 15:13:44,323 - INFO -    • Applied boxcox transformation
+2025-07-28 15:13:44,323 - INFO -    • New target skewness: 0.004
+2025-07-28 15:13:44,324 - INFO - 3. Advanced Feature Scaling (Robust Scaler)
+2025-07-28 15:13:44,347 - INFO -    • Applied RobustScaler (median-based scaling)
+2025-07-28 15:13:44,347 - INFO - 4. Feature Engineering
+2025-07-28 15:13:44,348 - INFO -    • Creating polynomial features for top 5 features
+2025-07-28 15:13:44,362 - INFO -    • Creating statistical features
+2025-07-28 15:13:44,381 - INFO -    • Creating binned features
+2025-07-28 15:13:44,425 - INFO -    • Created 30 new features
+2025-07-28 15:13:44,425 - INFO - 5. Feature Selection
+2025-07-28 15:13:52,122 - INFO -    • Selected 43 features using mutual information
+2025-07-28 15:13:52,122 - INFO - ✅ Enhanced preprocessing completed!
+2025-07-28 15:13:52,122 - INFO -    • Original features: 13
+2025-07-28 15:13:52,122 - INFO -    • Engineered features: 43
+2025-07-28 15:13:52,122 - INFO -    • Selected features: 43
+2025-07-28 15:13:52,122 - INFO -    • Training samples: 29022 (removed 2263 outliers)
+2025-07-28 15:13:52,123 - INFO - 
+🏗️ Training Baseline XGBoost Model
+2025-07-28 15:13:52,123 - INFO - ==================================================
+2025-07-28 15:14:14,686 - INFO - ✅ Baseline model trained in 22.56s
+2025-07-28 15:14:14,686 - INFO - 
+🎯 Hyperparameter Tuning
+2025-07-28 15:14:14,687 - INFO - ==================================================
+2025-07-28 15:14:14,687 - INFO - 1. Randomized Search (100 iterations)
+2025-07-28 15:29:13,100 - INFO -    • Best CV R² Score: 0.6530
+2025-07-28 15:29:13,101 - INFO -    • Tuning Time: 898.41s
+2025-07-28 15:29:13,101 - INFO -    • Best Parameters:
+2025-07-28 15:29:13,101 - INFO -      - subsample: 0.7
+2025-07-28 15:29:13,101 - INFO -      - reg_lambda: 1.5
+2025-07-28 15:29:13,101 - INFO -      - reg_alpha: 0.1
+2025-07-28 15:29:13,101 - INFO -      - n_estimators: 1000
+2025-07-28 15:29:13,101 - INFO -      - min_child_weight: 1
+2025-07-28 15:29:13,101 - INFO -      - max_depth: 8
+2025-07-28 15:29:13,101 - INFO -      - learning_rate: 0.01
+2025-07-28 15:29:13,101 - INFO -      - gamma: 0.1
+2025-07-28 15:29:13,101 - INFO -      - colsample_bytree: 0.7
+2025-07-28 15:29:13,101 - INFO - 2. Fine-tuning around best parameters
+2025-07-30 04:11:56,413 - INFO - 🚀 Enhanced XGBoost Training with Advanced Preprocessing
+2025-07-30 04:11:56,413 - INFO - Dataset: Airbnb Dataset
+2025-07-30 04:11:56,413 - INFO - Task: Regression - Predicting Airbnb listing prices
+2025-07-30 04:11:56,416 - INFO - ✅ Base preprocessed data loaded successfully!
+2025-07-30 04:11:56,416 - INFO - 
+🔧 XGBoost-Specific Data Preprocessing
+2025-07-30 04:11:56,416 - INFO - ============================================================
+2025-07-30 04:11:56,416 - INFO - 1. Outlier Detection and Handling
+2025-07-30 04:11:57,000 - INFO -    • Removed 2263 outliers (7.2%)
+2025-07-30 04:11:57,000 - INFO - 2. Target Variable Transformation
+2025-07-30 04:11:57,001 - INFO -    • Original target skewness: 1.426
+2025-07-30 04:11:57,103 - INFO -    • Applied boxcox transformation
+2025-07-30 04:11:57,103 - INFO -    • New target skewness: 0.004
+2025-07-30 04:11:57,104 - INFO - 3. Advanced Feature Scaling (Robust Scaler)
+2025-07-30 04:11:57,127 - INFO -    • Applied RobustScaler (median-based scaling)
+2025-07-30 04:11:57,127 - INFO - 4. Feature Engineering
+2025-07-30 04:11:57,127 - INFO -    • Creating polynomial features for top 5 features
+2025-07-30 04:11:57,142 - INFO -    • Creating statistical features
+2025-07-30 04:11:57,160 - INFO -    • Creating binned features
+2025-07-30 04:11:57,205 - INFO -    • Created 30 new features
+2025-07-30 04:11:57,205 - INFO - 5. Feature Selection
+2025-07-30 04:12:04,929 - INFO -    • Selected 43 features using mutual information
+2025-07-30 04:12:04,929 - INFO - ✅ Enhanced preprocessing completed!
+2025-07-30 04:12:04,929 - INFO -    • Original features: 13
+2025-07-30 04:12:04,929 - INFO -    • Engineered features: 43
+2025-07-30 04:12:04,929 - INFO -    • Selected features: 43
+2025-07-30 04:12:04,929 - INFO -    • Training samples: 29022 (removed 2263 outliers)
+2025-07-30 04:12:04,930 - INFO - 
+🏗️ Training Baseline XGBoost Model
+2025-07-30 04:12:04,930 - INFO - ==================================================
+2025-07-30 04:12:05,922 - INFO - ✅ Baseline model trained in 0.99s
+2025-07-30 04:12:05,922 - INFO - 
+🎯 Hyperparameter Tuning
+2025-07-30 04:12:05,922 - INFO - ==================================================
+2025-07-30 04:12:05,923 - INFO - 1. Randomized Search (100 iterations)
+2025-07-30 04:26:56,399 - INFO -    • Best CV R² Score: 0.6530
+2025-07-30 04:26:56,399 - INFO -    • Tuning Time: 890.48s
+2025-07-30 04:26:56,399 - INFO -    • Best Parameters:
+2025-07-30 04:26:56,399 - INFO -      - subsample: 0.7
+2025-07-30 04:26:56,400 - INFO -      - reg_lambda: 1.5
+2025-07-30 04:26:56,400 - INFO -      - reg_alpha: 0.1
+2025-07-30 04:26:56,400 - INFO -      - n_estimators: 1000
+2025-07-30 04:26:56,400 - INFO -      - min_child_weight: 1
+2025-07-30 04:26:56,400 - INFO -      - max_depth: 8
+2025-07-30 04:26:56,400 - INFO -      - learning_rate: 0.01
+2025-07-30 04:26:56,400 - INFO -      - gamma: 0.1
+2025-07-30 04:26:56,400 - INFO -      - colsample_bytree: 0.7
+2025-07-30 04:26:56,400 - INFO - 2. Fine-tuning around best parameters (RandomizedSearchCV)
+2025-07-30 04:26:56,400 - INFO -    • Fine-tuning with 20 iterations on 4 key parameters
+2025-07-30 04:31:24,185 - INFO -    • Fine-tuning completed in 267.78s
+2025-07-30 04:31:24,185 - INFO -    • Final Best CV R² Score: 0.6508
+2025-07-30 04:31:24,185 - INFO -    • Improvement: -0.0022
+2025-07-30 04:31:24,235 - INFO -    • Validation R² Score: 0.5975
+2025-07-30 04:31:24,237 - INFO - 
+📊 Model Comparison
+2025-07-30 04:31:24,237 - INFO - ==================================================
+2025-07-30 04:31:24,315 - INFO - 
+Model Performance Comparison:
+2025-07-30 04:31:24,315 - INFO - ------------------------------------------------------------
+2025-07-30 04:31:24,315 - INFO - Metric                    Baseline        Tuned           Improvement    
+2025-07-30 04:31:24,315 - INFO - ------------------------------------------------------------
+2025-07-30 04:31:24,315 - INFO - R2_SCORE                  0.1371          0.1343          -2.04%         
+2025-07-30 04:31:24,315 - INFO - RMSE                      185.8661        186.1665        -0.16%         
+2025-07-30 04:31:24,315 - INFO - MAE                       56.0733         55.7799         +0.52%         
+2025-07-30 04:31:24,315 - INFO - MAPE                      30.5908         30.2447         +1.13%         
+2025-07-30 04:31:24,318 - INFO - 
+🔬 Statistical Significance Test (Wilcoxon):
+2025-07-30 04:31:24,318 - INFO -    • Test Statistic: 22756437.5
+2025-07-30 04:31:24,318 - INFO -    • P-value: 0.000042
+2025-07-30 04:31:24,318 - INFO -    • Result: Significant difference (p < 0.05)
+2025-07-30 04:31:24,318 - INFO -    • Tuned model is significantly better
+2025-07-30 04:31:27,244 - INFO - 
+💾 Saving Enhanced Results
+2025-07-30 04:31:27,244 - INFO - ==================================================
+2025-07-30 04:31:27,244 - INFO - Saving trained models:
+2025-07-30 04:31:27,249 - INFO -    ✅ Baseline Enhanced Model: ./Section2_Model_Training/xgboost_baseline_enhanced.pkl
+2025-07-30 04:31:27,249 - INFO -       • R² Score: 0.1371
+2025-07-30 04:31:27,249 - INFO -       • RMSE: $185.87
+2025-07-30 04:31:27,249 - INFO -       • MAE: $56.07
+2025-07-30 04:31:27,270 - INFO -    ✅ Tuned Enhanced Model: ./Section2_Model_Training/xgboost_tuned_enhanced.pkl
+2025-07-30 04:31:27,270 - INFO -       • R² Score: 0.1343
+2025-07-30 04:31:27,270 - INFO -       • RMSE: $186.17
+2025-07-30 04:31:27,270 - INFO -       • MAE: $55.78
+2025-07-30 04:31:27,271 - INFO -    ✅ Model Metadata: ./Section2_Model_Training/enhanced_models_metadata.json
+2025-07-30 04:31:27,310 - INFO -    ✅ Preprocessing Components: ./Section2_Model_Training/enhanced_preprocessing_components.pkl
+2025-07-30 04:31:27,313 - INFO -    ✅ Model Comparison: ./Section2_Model_Training/enhanced_xgboost_comparison.csv
+2025-07-30 04:31:27,313 - INFO -    ✅ Feature Names: ./Section2_Model_Training/enhanced_feature_names.csv
+2025-07-30 04:31:27,482 - INFO -    ✅ Model Predictions: ./Section2_Model_Training/enhanced_model_predictions.csv
+2025-07-30 04:31:27,482 - INFO - 
+📁 Complete Enhanced Training Results:
+2025-07-30 04:31:27,482 - INFO -    🤖 Models:
+2025-07-30 04:31:27,482 - INFO -       - xgboost_baseline_enhanced.pkl (Enhanced preprocessing + default params)
+2025-07-30 04:31:27,482 - INFO -       - xgboost_tuned_enhanced.pkl (Enhanced preprocessing + optimized params)
+2025-07-30 04:31:27,482 - INFO -    🔧 Preprocessing:
+2025-07-30 04:31:27,482 - INFO -       - enhanced_preprocessing_components.pkl (All preprocessing objects)
+2025-07-30 04:31:27,482 - INFO -    📊 Analysis:
+2025-07-30 04:31:27,482 - INFO -       - enhanced_xgboost_comparison.csv (Performance comparison)
+2025-07-30 04:31:27,482 - INFO -       - enhanced_model_predictions.csv (Test set predictions)
+2025-07-30 04:31:27,483 - INFO -       - enhanced_feature_names.csv (Selected features)
+2025-07-30 04:31:27,483 - INFO -       - enhanced_models_metadata.json (Model metadata)
+2025-07-30 04:31:27,483 - INFO -    📈 Visualizations:
+2025-07-30 04:31:27,483 - INFO -       - Enhanced_XGBoost_Model_Comparison.png (Comparison plots)
+2025-07-30 04:31:27,483 - INFO - 
+🎯 Model Performance Summary:
+2025-07-30 04:31:27,483 - INFO -    • Baseline Enhanced Model R²: 0.1371
+2025-07-30 04:31:27,483 - INFO -    • Tuned Enhanced Model R²: 0.1343
+2025-07-30 04:31:27,483 - INFO -    • Performance Improvement: -0.0028 R² points
+2025-07-30 04:31:27,483 - INFO -    • Recommended Model: Baseline Enhanced
+2025-07-30 04:31:27,483 - INFO - 
+================================================================================
+2025-07-30 04:31:27,483 - INFO - ENHANCED XGBOOST TRAINING COMPLETION SUMMARY
+2025-07-30 04:31:27,483 - INFO - ================================================================================
+2025-07-30 04:31:27,483 - INFO - ✅ Enhanced XGBoost Training Completed Successfully!
+2025-07-30 04:31:27,483 - INFO - 
+📊 Final Results Comparison:
+2025-07-30 04:31:27,483 - INFO -    Baseline R² Score: 0.1371
+2025-07-30 04:31:27,483 - INFO -    Tuned R² Score: 0.1343
+2025-07-30 04:31:27,483 - INFO -    R² Improvement: -0.0028
+2025-07-30 04:31:27,483 - INFO - 
+   Baseline RMSE: $185.87
+2025-07-30 04:31:27,483 - INFO -    Tuned RMSE: $186.17
+2025-07-30 04:31:27,483 - INFO -    RMSE Improvement: $-0.30
+2025-07-30 04:31:27,483 - INFO - 
+🔧 Enhancements Applied:
+2025-07-30 04:31:27,483 - INFO -    • Outlier removal: 2263 samples
+2025-07-30 04:31:27,484 - INFO -    • Target transformation: boxcox
+2025-07-30 04:31:27,484 - INFO -    • Feature engineering: 43 features
+2025-07-30 04:31:27,484 - INFO -    • Hyperparameter tuning: 9 parameters optimized
+2025-07-30 04:31:27,484 - INFO -    • Advanced preprocessing: RobustScaler + feature selection
+2025-07-30 04:41:12,158 - INFO - 🚀 Enhanced XGBoost Training with Advanced Preprocessing
+2025-07-30 04:41:12,158 - INFO - Dataset: Airbnb Dataset
+2025-07-30 04:41:12,158 - INFO - Task: Regression - Predicting Airbnb listing prices
+2025-07-30 04:41:12,161 - INFO - ✅ Base preprocessed data loaded successfully!
+2025-07-30 04:41:12,161 - INFO - 
+🔧 XGBoost-Specific Data Preprocessing
+2025-07-30 04:41:12,161 - INFO - ============================================================
+2025-07-30 04:41:12,161 - INFO - 1. Outlier Detection and Handling
+2025-07-30 04:41:12,753 - INFO -    • Removed 2263 outliers (7.2%)
+2025-07-30 04:41:12,753 - INFO - 2. Target Variable Transformation
+2025-07-30 04:41:12,754 - INFO -    • Original target skewness: 1.426
+2025-07-30 04:41:12,856 - INFO -    • Applied boxcox transformation
+2025-07-30 04:41:12,856 - INFO -    • New target skewness: 0.004
+2025-07-30 04:41:12,857 - INFO - 3. Advanced Feature Scaling (Robust Scaler)
+2025-07-30 04:41:12,880 - INFO -    • Applied RobustScaler (median-based scaling)
+2025-07-30 04:41:12,880 - INFO - 4. Feature Engineering
+2025-07-30 04:41:12,881 - INFO -    • Creating polynomial features for top 5 features
+2025-07-30 04:41:12,895 - INFO -    • Creating statistical features
+2025-07-30 04:41:12,914 - INFO -    • Creating binned features
+2025-07-30 04:41:12,957 - INFO -    • Created 30 new features
+2025-07-30 04:41:12,957 - INFO - 5. Feature Selection
+2025-07-30 04:41:20,656 - INFO -    • Selected 43 features using mutual information
+2025-07-30 04:41:20,656 - INFO - ✅ Enhanced preprocessing completed!
+2025-07-30 04:41:20,656 - INFO -    • Original features: 13
+2025-07-30 04:41:20,656 - INFO -    • Engineered features: 43
+2025-07-30 04:41:20,656 - INFO -    • Selected features: 43
+2025-07-30 04:41:20,656 - INFO -    • Training samples: 29022 (removed 2263 outliers)
+2025-07-30 04:41:20,656 - INFO - 
+🏗️ Training Baseline XGBoost Model
+2025-07-30 04:41:20,656 - INFO - ==================================================
+2025-07-30 04:41:21,644 - INFO - ✅ Baseline model trained in 0.99s
+2025-07-30 04:41:21,644 - INFO - 
+🎯 Advanced Multi-Stage Hyperparameter Tuning
+2025-07-30 04:41:21,645 - INFO - ============================================================
+2025-07-30 04:41:21,645 - INFO - 🔍 Stage 1: Broad Parameter Space Exploration
+2025-07-30 05:18:20,256 - INFO -    ✅ Stage 1 completed in 2218.61s
+2025-07-30 05:18:20,256 - INFO -    • Best CV R² Score: 0.6524
+2025-07-30 05:18:20,256 - INFO -    • Best Parameters:
+2025-07-30 05:18:20,256 - INFO -      - subsample: 0.7
+2025-07-30 05:18:20,256 - INFO -      - reg_lambda: 2.0
+2025-07-30 05:18:20,256 - INFO -      - reg_alpha: 0.05
+2025-07-30 05:18:20,256 - INFO -      - n_estimators: 1500
+2025-07-30 05:18:20,256 - INFO -      - min_child_weight: 6
+2025-07-30 05:18:20,256 - INFO -      - max_depth: 8
+2025-07-30 05:18:20,256 - INFO -      - learning_rate: 0.01
+2025-07-30 05:18:20,256 - INFO -      - gamma: 0.3
+2025-07-30 05:18:20,256 - INFO -      - colsample_bytree: 0.8
+2025-07-30 05:18:20,256 - INFO - 
+🎯 Stage 2: Focused Parameter Refinement
+2025-07-30 05:51:31,663 - INFO -    ✅ Stage 2 completed in 1991.41s
+2025-07-30 05:51:31,663 - INFO -    • Best CV R² Score: 0.6536
+2025-07-30 05:51:31,663 - INFO -    • Improvement from Stage 1: +0.0012
+2025-07-30 05:51:31,663 - INFO - 
+🎯 Stage 3: Final Precision Tuning with Early Stopping
+2025-07-30 05:51:39,699 - ERROR - ❌ Error in enhanced XGBoost training pipeline: 
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 732, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/xgboost/core.py", line 729, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/xgboost/sklearn.py", line 1247, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/xgboost/core.py", line 729, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/xgboost/training.py", line 184, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/xgboost/callback.py", line 267, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/xgboost/callback.py", line 267, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/tabular/lib/python3.11/site-packages/xgboost/callback.py", line 463, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+
+2025-07-30 05:57:38,819 - INFO - 🚀 Enhanced XGBoost Training with Advanced Preprocessing
+2025-07-30 05:57:38,819 - INFO - Dataset: Airbnb Dataset
+2025-07-30 05:57:38,820 - INFO - Task: Regression - Predicting Airbnb listing prices
+2025-07-30 05:57:38,823 - INFO - ✅ Base preprocessed data loaded successfully!
+2025-07-30 05:57:38,823 - INFO - 
+🔧 XGBoost-Specific Data Preprocessing
+2025-07-30 05:57:38,823 - INFO - ============================================================
+2025-07-30 05:57:38,823 - INFO - 1. Outlier Detection and Handling
+2025-07-30 05:57:39,417 - INFO -    • Removed 2263 outliers (7.2%)
+2025-07-30 05:57:39,417 - INFO - 2. Target Variable Transformation
+2025-07-30 05:57:39,419 - INFO -    • Original target skewness: 1.426
+2025-07-30 05:57:39,521 - INFO -    • Applied boxcox transformation
+2025-07-30 05:57:39,521 - INFO -    • New target skewness: 0.004
+2025-07-30 05:57:39,522 - INFO - 3. Advanced Feature Scaling (Robust Scaler)
+2025-07-30 05:57:39,545 - INFO -    • Applied RobustScaler (median-based scaling)
+2025-07-30 05:57:39,545 - INFO - 4. Feature Engineering
+2025-07-30 05:57:39,546 - INFO -    • Creating polynomial features for top 5 features
+2025-07-30 05:57:39,560 - INFO -    • Creating statistical features
+2025-07-30 05:57:39,579 - INFO -    • Creating binned features
+2025-07-30 05:57:39,622 - INFO -    • Created 30 new features
+2025-07-30 05:57:39,623 - INFO - 5. Feature Selection
+2025-07-30 05:57:47,358 - INFO -    • Selected 43 features using mutual information
+2025-07-30 05:57:47,358 - INFO - ✅ Enhanced preprocessing completed!
+2025-07-30 05:57:47,358 - INFO -    • Original features: 13
+2025-07-30 05:57:47,358 - INFO -    • Engineered features: 43
+2025-07-30 05:57:47,358 - INFO -    • Selected features: 43
+2025-07-30 05:57:47,358 - INFO -    • Training samples: 29022 (removed 2263 outliers)
+2025-07-30 05:57:47,359 - INFO - 
+🏗️ Training Baseline XGBoost Model
+2025-07-30 05:57:47,359 - INFO - ==================================================
+2025-07-30 05:57:48,336 - INFO - ✅ Baseline model trained in 0.98s
+2025-07-30 05:57:48,337 - INFO - 
+🎯 Advanced Multi-Stage Hyperparameter Tuning
+2025-07-30 05:57:48,337 - INFO - ============================================================
+2025-07-30 05:57:48,337 - INFO - 🔍 Stage 1: Broad Parameter Space Exploration
+2025-07-30 06:34:54,265 - INFO -    ✅ Stage 1 completed in 2225.93s
+2025-07-30 06:34:54,265 - INFO -    • Best CV R² Score: 0.6524
+2025-07-30 06:34:54,265 - INFO -    • Best Parameters:
+2025-07-30 06:34:54,265 - INFO -      - subsample: 0.7
+2025-07-30 06:34:54,265 - INFO -      - reg_lambda: 2.0
+2025-07-30 06:34:54,265 - INFO -      - reg_alpha: 0.05
+2025-07-30 06:34:54,265 - INFO -      - n_estimators: 1500
+2025-07-30 06:34:54,265 - INFO -      - min_child_weight: 6
+2025-07-30 06:34:54,265 - INFO -      - max_depth: 8
+2025-07-30 06:34:54,265 - INFO -      - learning_rate: 0.01
+2025-07-30 06:34:54,265 - INFO -      - gamma: 0.3
+2025-07-30 06:34:54,265 - INFO -      - colsample_bytree: 0.8
+2025-07-30 06:34:54,265 - INFO - 
+🎯 Stage 2: Focused Parameter Refinement
+2025-07-30 07:08:03,667 - INFO -    ✅ Stage 2 completed in 1989.40s
+2025-07-30 07:08:03,667 - INFO -    • Best CV R² Score: 0.6536
+2025-07-30 07:08:03,668 - INFO -    • Improvement from Stage 1: +0.0012
+2025-07-30 07:08:03,668 - INFO - 
+🎯 Stage 3: Final Precision Tuning with Early Stopping
+2025-07-30 07:08:03,668 - ERROR - ❌ Error in enhanced XGBoost training pipeline: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-07-30 07:19:57,457 - INFO - 🚀 Enhanced XGBoost Training with Advanced Preprocessing
+2025-07-30 07:19:57,457 - INFO - Dataset: Airbnb Dataset
+2025-07-30 07:19:57,458 - INFO - Task: Regression - Predicting Airbnb listing prices
+2025-07-30 07:19:57,461 - INFO - ✅ Base preprocessed data loaded successfully!
+2025-07-30 07:19:57,461 - INFO - 
+🔧 XGBoost-Specific Data Preprocessing
+2025-07-30 07:19:57,461 - INFO - ============================================================
+2025-07-30 07:19:57,461 - INFO - 1. Outlier Detection and Handling
+2025-07-30 07:19:58,037 - INFO -    • Removed 2263 outliers (7.2%)
+2025-07-30 07:19:58,038 - INFO - 2. Target Variable Transformation
+2025-07-30 07:19:58,039 - INFO -    • Original target skewness: 1.426
+2025-07-30 07:19:58,138 - INFO -    • Applied boxcox transformation
+2025-07-30 07:19:58,138 - INFO -    • New target skewness: 0.004
+2025-07-30 07:19:58,138 - INFO - 3. Advanced Feature Scaling (Robust Scaler)
+2025-07-30 07:19:58,161 - INFO -    • Applied RobustScaler (median-based scaling)
+2025-07-30 07:19:58,161 - INFO - 4. Feature Engineering
+2025-07-30 07:19:58,162 - INFO -    • Creating polynomial features for top 5 features
+2025-07-30 07:19:58,176 - INFO -    • Creating statistical features
+2025-07-30 07:19:58,194 - INFO -    • Creating binned features
+2025-07-30 07:19:58,238 - INFO -    • Created 30 new features
+2025-07-30 07:19:58,238 - INFO - 5. Feature Selection
+2025-07-30 07:20:05,902 - INFO -    • Selected 43 features using mutual information
+2025-07-30 07:20:05,902 - INFO - ✅ Enhanced preprocessing completed!
+2025-07-30 07:20:05,902 - INFO -    • Original features: 13
+2025-07-30 07:20:05,902 - INFO -    • Engineered features: 43
+2025-07-30 07:20:05,902 - INFO -    • Selected features: 43
+2025-07-30 07:20:05,903 - INFO -    • Training samples: 29022 (removed 2263 outliers)
+2025-07-30 07:20:05,903 - INFO - 
+🏗️ Training Baseline XGBoost Model
+2025-07-30 07:20:05,903 - INFO - ==================================================
+2025-07-30 07:20:06,879 - INFO - ✅ Baseline model trained in 0.98s
+2025-07-30 07:20:06,879 - INFO - 
+🎯 Advanced Multi-Stage Hyperparameter Tuning
+2025-07-30 07:20:06,879 - INFO - ============================================================
+2025-07-30 07:20:06,880 - INFO - 🔍 Stage 1: Broad Parameter Space Exploration
+2025-07-30 07:57:00,854 - INFO -    ✅ Stage 1 completed in 2213.97s
+2025-07-30 07:57:00,854 - INFO -    • Best CV R² Score: 0.6524
+2025-07-30 07:57:00,854 - INFO -    • Best Parameters:
+2025-07-30 07:57:00,854 - INFO -      - subsample: 0.7
+2025-07-30 07:57:00,854 - INFO -      - reg_lambda: 2.0
+2025-07-30 07:57:00,855 - INFO -      - reg_alpha: 0.05
+2025-07-30 07:57:00,855 - INFO -      - n_estimators: 1500
+2025-07-30 07:57:00,855 - INFO -      - min_child_weight: 6
+2025-07-30 07:57:00,855 - INFO -      - max_depth: 8
+2025-07-30 07:57:00,855 - INFO -      - learning_rate: 0.01
+2025-07-30 07:57:00,855 - INFO -      - gamma: 0.3
+2025-07-30 07:57:00,855 - INFO -      - colsample_bytree: 0.8
+2025-07-30 07:57:00,855 - INFO - 
+🎯 Stage 2: Focused Parameter Refinement
+2025-07-30 08:30:06,037 - INFO -    ✅ Stage 2 completed in 1985.18s
+2025-07-30 08:30:06,038 - INFO -    • Best CV R² Score: 0.6536
+2025-07-30 08:30:06,038 - INFO -    • Improvement from Stage 1: +0.0012
+2025-07-30 08:30:06,038 - INFO - 
+🎯 Stage 3: Final Precision Tuning with Early Stopping
+2025-07-30 08:30:43,908 - INFO -    ✅ Stage 3 completed in 7.76s
+2025-07-30 08:30:43,908 - INFO -    • Early stopping at 1656 estimators
+2025-07-30 08:30:43,908 - INFO -    • Final CV R² Score: 0.6536
+2025-07-30 08:30:43,908 - INFO -    • Validation R² Score: 0.5999
+2025-07-30 08:30:43,908 - INFO -    • Total improvement: +0.0012
+2025-07-30 08:30:43,908 - INFO - 
+🚀 Stage 4: Advanced Ensemble Techniques
+2025-07-30 08:30:43,909 - INFO -    Testing advanced configuration 1/3...
+2025-07-30 08:31:11,667 - INFO -      Score: 0.6513
+2025-07-30 08:31:11,668 - INFO -    Testing advanced configuration 2/3...
+2025-07-30 08:31:32,908 - INFO -      Score: 0.6500
+2025-07-30 08:31:32,908 - INFO -    Testing advanced configuration 3/3...
+2025-07-30 08:31:46,633 - INFO -      Score: 0.6507
+2025-07-30 08:31:46,633 - INFO - 
+📊 Hyperparameter Tuning Summary:
+2025-07-30 08:31:46,634 - INFO -    • Total tuning time: 4206.91s
+2025-07-30 08:31:46,634 - INFO -    • Initial best score: 0.6524
+2025-07-30 08:31:46,634 - INFO -    • Final best score: 0.6536
+2025-07-30 08:31:46,634 - INFO -    • Total improvement: +0.0012 (+0.18%)
+2025-07-30 08:31:46,634 - INFO -    • Final validation score: 0.5999
+2025-07-30 08:31:46,634 - INFO - 
+🏆 Final Optimized Parameters:
+2025-07-30 08:31:46,634 - INFO -      - subsample: 0.7999999999999999
+2025-07-30 08:31:46,634 - INFO -      - reg_lambda: 2.4
+2025-07-30 08:31:46,634 - INFO -      - reg_alpha: 0.04000000000000001
+2025-07-30 08:31:46,634 - INFO -      - n_estimators: 1656
+2025-07-30 08:31:46,635 - INFO -      - min_child_weight: 8
+2025-07-30 08:31:46,635 - INFO -      - max_depth: 7
+2025-07-30 08:31:46,635 - INFO -      - learning_rate: 0.01
+2025-07-30 08:31:46,635 - INFO -      - gamma: 0.15
+2025-07-30 08:31:46,635 - INFO -      - colsample_bytree: 0.7000000000000001
+2025-07-30 08:31:46,637 - INFO - 
+📊 Model Comparison
+2025-07-30 08:31:46,638 - INFO - ==================================================
+2025-07-30 08:31:46,743 - INFO - 
+Model Performance Comparison:
+2025-07-30 08:31:46,743 - INFO - ------------------------------------------------------------
+2025-07-30 08:31:46,743 - INFO - Metric                    Baseline        Tuned           Improvement    
+2025-07-30 08:31:46,743 - INFO - ------------------------------------------------------------
+2025-07-30 08:31:46,743 - INFO - R2_SCORE                  0.1371          0.1367          -0.30%         
+2025-07-30 08:31:46,744 - INFO - RMSE                      185.8661        185.9103        -0.02%         
+2025-07-30 08:31:46,744 - INFO - MAE                       56.0733         55.6565         +0.74%         
+2025-07-30 08:31:46,744 - INFO - MAPE                      30.5908         30.1839         +1.33%         
+2025-07-30 08:31:46,746 - INFO - 
+🔬 Statistical Significance Test (Wilcoxon):
+2025-07-30 08:31:46,747 - INFO -    • Test Statistic: 22285028.5
+2025-07-30 08:31:46,747 - INFO -    • P-value: 0.000000
+2025-07-30 08:31:46,747 - INFO -    • Result: Significant difference (p < 0.05)
+2025-07-30 08:31:46,747 - INFO -    • Tuned model is significantly better
+2025-07-30 08:31:49,674 - INFO - 
+💾 Saving Enhanced Results
+2025-07-30 08:31:49,674 - INFO - ==================================================
+2025-07-30 08:31:49,674 - INFO - Saving trained models:
+2025-07-30 08:31:49,678 - INFO -    ✅ Baseline Enhanced Model: ./Section2_Model_Training/xgboost_baseline_enhanced.pkl
+2025-07-30 08:31:49,678 - INFO -       • R² Score: 0.1371
+2025-07-30 08:31:49,678 - INFO -       • RMSE: $185.87
+2025-07-30 08:31:49,678 - INFO -       • MAE: $56.07
+2025-07-30 08:31:49,726 - INFO -    ✅ Tuned Enhanced Model: ./Section2_Model_Training/xgboost_tuned_enhanced.pkl
+2025-07-30 08:31:49,726 - INFO -       • R² Score: 0.1367
+2025-07-30 08:31:49,726 - INFO -       • RMSE: $185.91
+2025-07-30 08:31:49,726 - INFO -       • MAE: $55.66
+2025-07-30 08:31:49,727 - INFO -    ✅ Model Metadata: ./Section2_Model_Training/enhanced_models_metadata.json
+2025-07-30 08:31:49,765 - INFO -    ✅ Preprocessing Components: ./Section2_Model_Training/enhanced_preprocessing_components.pkl
+2025-07-30 08:31:49,768 - INFO -    ✅ Model Comparison: ./Section2_Model_Training/enhanced_xgboost_comparison.csv
+2025-07-30 08:31:49,769 - INFO -    ✅ Feature Names: ./Section2_Model_Training/enhanced_feature_names.csv
+2025-07-30 08:31:49,961 - INFO -    ✅ Model Predictions: ./Section2_Model_Training/enhanced_model_predictions.csv
+2025-07-30 08:31:49,961 - INFO - 
+📁 Complete Enhanced Training Results:
+2025-07-30 08:31:49,961 - INFO -    🤖 Models:
+2025-07-30 08:31:49,961 - INFO -       - xgboost_baseline_enhanced.pkl (Enhanced preprocessing + default params)
+2025-07-30 08:31:49,961 - INFO -       - xgboost_tuned_enhanced.pkl (Enhanced preprocessing + optimized params)
+2025-07-30 08:31:49,961 - INFO -    🔧 Preprocessing:
+2025-07-30 08:31:49,961 - INFO -       - enhanced_preprocessing_components.pkl (All preprocessing objects)
+2025-07-30 08:31:49,961 - INFO -    📊 Analysis:
+2025-07-30 08:31:49,961 - INFO -       - enhanced_xgboost_comparison.csv (Performance comparison)
+2025-07-30 08:31:49,961 - INFO -       - enhanced_model_predictions.csv (Test set predictions)
+2025-07-30 08:31:49,961 - INFO -       - enhanced_feature_names.csv (Selected features)
+2025-07-30 08:31:49,961 - INFO -       - enhanced_models_metadata.json (Model metadata)
+2025-07-30 08:31:49,962 - INFO -    📈 Visualizations:
+2025-07-30 08:31:49,962 - INFO -       - Enhanced_XGBoost_Model_Comparison.png (Comparison plots)
+2025-07-30 08:31:49,962 - INFO - 
+🎯 Model Performance Summary:
+2025-07-30 08:31:49,962 - INFO -    • Baseline Enhanced Model R²: 0.1371
+2025-07-30 08:31:49,962 - INFO -    • Tuned Enhanced Model R²: 0.1367
+2025-07-30 08:31:49,962 - INFO -    • Performance Improvement: -0.0004 R² points
+2025-07-30 08:31:49,962 - INFO -    • Recommended Model: Baseline Enhanced
+2025-07-30 08:31:49,962 - INFO - 
+================================================================================
+2025-07-30 08:31:49,962 - INFO - ENHANCED XGBOOST TRAINING COMPLETION SUMMARY
+2025-07-30 08:31:49,962 - INFO - ================================================================================
+2025-07-30 08:31:49,962 - INFO - ✅ Enhanced XGBoost Training Completed Successfully!
+2025-07-30 08:31:49,962 - INFO - 
+📊 Final Results Comparison:
+2025-07-30 08:31:49,962 - INFO -    Baseline R² Score: 0.1371
+2025-07-30 08:31:49,962 - INFO -    Tuned R² Score: 0.1367
+2025-07-30 08:31:49,962 - INFO -    R² Improvement: -0.0004
+2025-07-30 08:31:49,962 - INFO - 
+   Baseline RMSE: $185.87
+2025-07-30 08:31:49,962 - INFO -    Tuned RMSE: $185.91
+2025-07-30 08:31:49,962 - INFO -    RMSE Improvement: $-0.04
+2025-07-30 08:31:49,962 - INFO - 
+🔧 Enhancements Applied:
+2025-07-30 08:31:49,962 - INFO -    • Outlier removal: 2263 samples
+2025-07-30 08:31:49,962 - INFO -    • Target transformation: boxcox
+2025-07-30 08:31:49,963 - INFO -    • Feature engineering: 43 features
+2025-07-30 08:31:49,963 - INFO -    • Hyperparameter tuning: 9 parameters optimized
+2025-07-30 08:31:49,963 - INFO -    • Advanced preprocessing: RobustScaler + feature selection

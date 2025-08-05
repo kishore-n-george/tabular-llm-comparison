@@ -1,0 +1,296 @@
+2025-07-19 15:42:27,771 - This goes to output.log
+2025-07-19 15:42:27,771 - Loading Online Shoppers Dataset...
+2025-07-19 15:42:29,954 - Dataset shape: (12330, 18)
+2025-07-19 15:42:29,954 - 
+Dataset info:
+2025-07-19 15:42:29,961 - None
+2025-07-19 15:42:29,961 - 
+Class distribution:
+2025-07-19 15:42:29,962 - Revenue
+False    10422
+True      1908
+Name: count, dtype: int64
+2025-07-19 15:42:29,963 - Class imbalance ratio: 5.46:1
+2025-07-19 15:42:29,970 - Features shape: (12330, 17)
+2025-07-19 15:42:29,970 - Target shape: (12330,)
+2025-07-19 15:42:29,970 - Feature names: ['Administrative', 'Administrative_Duration', 'Informational', 'Informational_Duration', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'Month', 'OperatingSystems', 'Browser', 'Region', 'TrafficType', 'VisitorType', 'Weekend']
+2025-07-19 15:42:29,984 - Training set: (7891, 17)
+2025-07-19 15:42:29,984 - Validation set: (1973, 17)
+2025-07-19 15:42:29,984 - Test set: (2466, 17)
+2025-07-19 15:42:29,984 - 
+Class distribution in train: [6670 1221]
+2025-07-19 15:42:29,984 - Class distribution in val: [1668  305]
+2025-07-19 15:42:29,984 - Class distribution in test: [2084  382]
+2025-07-19 15:42:29,985 - Training XGBoost...
+2025-07-19 15:42:52,904 - Training TabPFN v2...
+2025-07-19 15:43:34,595 - Training TabICL...
+2025-07-19 15:44:42,688 - Training FT-Transformer...
+2025-07-19 15:44:42,688 - FT-Transformer training would be implemented here with proper categorical/numerical feature separation
+2025-07-19 15:44:42,688 - For now, we'll skip this model to avoid complexity in the comprehensive comparison
+2025-07-19 15:44:43,802 - 
+====================================================================================================
+2025-07-19 15:44:43,802 - DETAILED PERFORMANCE COMPARISON
+2025-07-19 15:44:43,802 - ====================================================================================================
+2025-07-19 15:44:43,805 -           model_name  accuracy balanced_accuracy precision    recall        f1       mcc train_time inference_time predictions_per_second   auc_roc avg_precision  log_loss brier_score cv_f1_mean cv_f1_std
+XGBoost      XGBoost  0.897405          0.761849  0.712871  0.565445  0.630657  0.577181  18.629408       0.020259          121721.393179   0.92125      0.717805  0.247605     0.07583   0.633772  0.020686
+TabPFN v2  TabPFN v2  0.901054          0.774698  0.719745  0.591623  0.649425  0.596322   0.503049       8.098991             304.482385  0.932553      0.753285  0.225356    0.070177   0.667581  0.019888
+TabICL        TabICL  0.899432          0.770532  0.714744   0.58377  0.642651  0.588882   0.570028       11.56773              213.17925   0.93395      0.754274  0.222694    0.069713   0.666521  0.024492
+2025-07-19 15:44:43,805 - 
+============================================================
+2025-07-19 15:44:43,805 - EXPLAINABILITY ANALYSIS
+2025-07-19 15:44:43,805 - ============================================================
+2025-07-19 16:05:26,925 - num_full_subsets = 2
+2025-07-19 16:05:26,926 - remaining_weight_vector = array([0.23108621, 0.18664656, 0.16176035, 0.14705486, 0.13865173,
+       0.13480029])
+2025-07-19 16:05:26,926 - num_paired_subset_sizes = 8
+2025-07-19 16:05:26,960 - weight_left = 0.5181019626448611
+2025-07-19 16:07:39,010 - 
+============================================================
+2025-07-19 16:07:39,010 - CLASS IMBALANCE ANALYSIS
+2025-07-19 16:07:39,010 - ============================================================
+2025-07-19 16:07:39,010 - XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.8, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric='logloss',
+              feature_types=None, feature_weights=None, gamma=None,
+              grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.1, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=200, n_jobs=None,
+              num_parallel_tree=None, ...)
+2025-07-19 16:07:39,012 - XGBoost
+2025-07-19 16:07:39,021 - 
+XGBoost - Per-Class Performance:
+2025-07-19 16:07:39,021 -   Class 0 (No Purchase): Precision=0.9233, Recall=0.9583, F1=0.9404
+2025-07-19 16:07:39,021 -   Class 1 (Purchase): Precision=0.7129, Recall=0.5654, F1=0.6307
+2025-07-19 16:07:39,023 -   True Negatives: 1997, False Positives: 87
+2025-07-19 16:07:39,023 -   False Negatives: 166, True Positives: 216
+2025-07-19 16:07:39,023 -   Sensitivity (TPR): 0.5654
+2025-07-19 16:07:39,023 -   Specificity (TNR): 0.9583
+2025-07-19 16:07:39,023 -   False Positive Rate: 0.0417
+2025-07-19 16:07:39,023 -   False Negative Rate: 0.4346
+2025-07-19 16:07:39,023 - TabPFN v2
+2025-07-19 16:07:46,229 - 
+TabPFN v2 - Per-Class Performance:
+2025-07-19 16:07:46,229 -   Class 0 (No Purchase): Precision=0.9275, Recall=0.9578, F1=0.9424
+2025-07-19 16:07:46,229 -   Class 1 (Purchase): Precision=0.7197, Recall=0.5916, F1=0.6494
+2025-07-19 16:07:46,231 -   True Negatives: 1996, False Positives: 88
+2025-07-19 16:07:46,231 -   False Negatives: 156, True Positives: 226
+2025-07-19 16:07:46,231 -   Sensitivity (TPR): 0.5916
+2025-07-19 16:07:46,231 -   Specificity (TNR): 0.9578
+2025-07-19 16:07:46,231 -   False Positive Rate: 0.0422
+2025-07-19 16:07:46,231 -   False Negative Rate: 0.4084
+2025-07-19 16:07:46,231 - TabICL
+2025-07-19 16:07:57,941 - 
+TabICL - Per-Class Performance:
+2025-07-19 16:07:57,942 -   Class 0 (No Purchase): Precision=0.9262, Recall=0.9573, F1=0.9415
+2025-07-19 16:07:57,942 -   Class 1 (Purchase): Precision=0.7147, Recall=0.5838, F1=0.6427
+2025-07-19 16:07:57,943 -   True Negatives: 1995, False Positives: 89
+2025-07-19 16:07:57,943 -   False Negatives: 159, True Positives: 223
+2025-07-19 16:07:57,943 -   Sensitivity (TPR): 0.5838
+2025-07-19 16:07:57,943 -   Specificity (TNR): 0.9573
+2025-07-19 16:07:57,943 -   False Positive Rate: 0.0427
+2025-07-19 16:07:57,943 -   False Negative Rate: 0.4162
+2025-07-19 16:07:57,943 - 
+============================================================
+2025-07-19 16:07:57,943 - ERROR ANALYSIS
+2025-07-19 16:07:57,943 - ============================================================
+2025-07-19 16:07:57,949 - Total misclassified samples: 253 out of 2466
+2025-07-19 16:07:57,949 - Misclassification rate: 10.26%
+2025-07-19 16:07:58,343 - 
+Top 5 features with largest differences in misclassified samples:
+2025-07-19 16:07:58,344 -    1. ProductRelated: 0.6888
+2025-07-19 16:07:58,344 -    2. ProductRelated_Duration: 0.6073
+2025-07-19 16:07:58,344 -    3. Administrative: 0.5784
+2025-07-19 16:07:58,344 -    4. PageValues: 0.4411
+2025-07-19 16:07:58,344 -    5. Administrative_Duration: 0.4041
+2025-07-19 16:07:58,344 - 📊 Extended Error Analysis Framework Loaded
+2025-07-19 16:07:58,345 - Ready to analyze TabICL and TabPFN error patterns
+2025-07-19 16:07:58,345 - 🔍 Verifying Required Resources:
+2025-07-19 16:07:58,345 -    ✅ X_train_scaled: shape (7891, 17)
+2025-07-19 16:07:58,345 -    ✅ X_test_scaled: shape (2466, 17)
+2025-07-19 16:07:58,345 -    ✅ y_train: length 7891
+2025-07-19 16:07:58,345 -    ✅ y_test: length 2466
+2025-07-19 16:07:58,345 -    ✅ feature_names: 17 features
+2025-07-19 16:07:58,345 -    ✅ models: ['XGBoost', 'TabPFN v2', 'TabICL']
+2025-07-19 16:07:58,345 - 
+📊 Models available for error analysis: ['XGBoost', 'TabPFN v2', 'TabICL']
+2025-07-19 16:07:58,345 - 🔮 Generating predictions from all models...
+2025-07-19 16:07:58,345 -    Processing XGBoost...
+2025-07-19 16:07:58,392 -      Misclassified: 253 / 2466 (10.26%)
+2025-07-19 16:07:58,392 -    Processing TabPFN v2...
+2025-07-19 16:08:12,795 -      Misclassified: 244 / 2466 (9.89%)
+2025-07-19 16:08:12,795 -    Processing TabICL...
+2025-07-19 16:08:36,097 -      Misclassified: 248 / 2466 (10.06%)
+2025-07-19 16:08:36,097 - 
+✅ Predictions generated for all models
+2025-07-19 16:08:36,108 - 📊 CROSS-MODEL ERROR COMPARISON
+2025-07-19 16:08:36,109 - ================================================================================
+2025-07-19 16:08:36,112 -     Model  Total_Errors  Error_Rate_%  False_Positives  False_Negatives  FP_Rate_%  FN_Rate_%  Precision_Class_0  Precision_Class_1  Recall_Class_0  Recall_Class_1  F1_Class_0  F1_Class_1
+  XGBoost           253       10.2595               87              166     4.1747    43.4555             0.9233             0.7129          0.9583          0.5654      0.9404      0.6307
+TabPFN v2           244        9.8946               88              156     4.2226    40.8377             0.9275             0.7197          0.9578          0.5916      0.9424      0.6494
+   TabICL           248       10.0568               89              159     4.2706    41.6230             0.9262             0.7147          0.9573          0.5838      0.9415      0.6427
+2025-07-19 16:08:36,114 - 
+💾 Results saved to 'cross_model_error_comparison.csv'
+2025-07-19 16:08:37,389 - 🎯 CONFIDENCE ANALYSIS
+2025-07-19 16:08:37,389 - ============================================================
+2025-07-19 16:08:37,436 - 
+XGBoost Confidence Analysis:
+2025-07-19 16:08:37,436 -    Average confidence (correct): 0.9398
+2025-07-19 16:08:37,436 -    Average confidence (misclassified): 0.7673
+2025-07-19 16:08:37,436 -    Low confidence errors (<60%): 17.0%
+2025-07-19 16:08:37,465 - 
+TabPFN v2 Confidence Analysis:
+2025-07-19 16:08:37,465 -    Average confidence (correct): 0.9357
+2025-07-19 16:08:37,465 -    Average confidence (misclassified): 0.7371
+2025-07-19 16:08:37,465 -    Low confidence errors (<60%): 27.5%
+2025-07-19 16:08:37,492 - 
+TabICL Confidence Analysis:
+2025-07-19 16:08:37,492 -    Average confidence (correct): 0.9348
+2025-07-19 16:08:37,492 -    Average confidence (misclassified): 0.7240
+2025-07-19 16:08:37,492 -    Low confidence errors (<60%): 28.2%
+2025-07-19 16:08:38,319 - 
+📊 CONFIDENCE STATISTICS
+2025-07-19 16:08:38,322 -     Model  Avg_Confidence_Correct  Avg_Confidence_Misclassified  Std_Confidence_Correct  Std_Confidence_Misclassified  Low_Confidence_Errors_%
+  XGBoost                  0.9398                        0.7673                  0.1050                        0.1489                  16.9960
+TabPFN v2                  0.9357                        0.7371                  0.1073                        0.1531                  27.4590
+   TabICL                  0.9348                        0.7240                  0.1102                        0.1500                  28.2258
+2025-07-19 16:08:38,323 - 🔍 FEATURE-BASED ERROR ANALYSIS
+2025-07-19 16:08:38,323 - ============================================================
+2025-07-19 16:08:38,323 - 
+Analyzing XGBoost...
+2025-07-19 16:08:38,344 -    Top 5 significant features (p < 0.05):
+2025-07-19 16:08:38,344 -      1. ProductRelated: diff=0.6888, p=0.0000
+2025-07-19 16:08:38,344 -      2. ProductRelated_Duration: diff=0.6073, p=0.0000
+2025-07-19 16:08:38,344 -      3. Administrative: diff=0.5784, p=0.0000
+2025-07-19 16:08:38,344 -      4. PageValues: diff=0.4411, p=0.0000
+2025-07-19 16:08:38,344 -      5. Administrative_Duration: diff=0.4041, p=0.0000
+2025-07-19 16:08:38,344 - 
+Analyzing TabPFN v2...
+2025-07-19 16:08:38,363 -    Top 5 significant features (p < 0.05):
+2025-07-19 16:08:38,363 -      1. ProductRelated: diff=0.5894, p=0.0000
+2025-07-19 16:08:38,363 -      2. PageValues: diff=0.5401, p=0.0000
+2025-07-19 16:08:38,363 -      3. ProductRelated_Duration: diff=0.4982, p=0.0000
+2025-07-19 16:08:38,363 -      4. Administrative: diff=0.4957, p=0.0000
+2025-07-19 16:08:38,363 -      5. ExitRates: diff=-0.3465, p=0.0000
+2025-07-19 16:08:38,363 - 
+Analyzing TabICL...
+2025-07-19 16:08:38,382 -    Top 5 significant features (p < 0.05):
+2025-07-19 16:08:38,382 -      1. ProductRelated: diff=0.6469, p=0.0000
+2025-07-19 16:08:38,382 -      2. Administrative: diff=0.5584, p=0.0000
+2025-07-19 16:08:38,382 -      3. PageValues: diff=0.5528, p=0.0000
+2025-07-19 16:08:38,383 -      4. ProductRelated_Duration: diff=0.5506, p=0.0000
+2025-07-19 16:08:38,383 -      5. Administrative_Duration: diff=0.3977, p=0.0000
+2025-07-19 16:08:39,984 - 🔄 ERROR OVERLAP ANALYSIS
+2025-07-19 16:08:39,984 - ============================================================
+2025-07-19 16:08:39,984 - 
+Error Overlap Statistics:
+2025-07-19 16:08:39,984 -    Common errors (all models): 195
+2025-07-19 16:08:39,984 -    XGBoost unique errors: 37
+2025-07-19 16:08:39,985 -    TabPFN v2 unique errors: 12
+2025-07-19 16:08:39,985 -    TabICL unique errors: 11
+2025-07-19 16:08:39,985 - 
+Pairwise Error Overlaps:
+2025-07-19 16:08:39,985 -    XGBoost_vs_TabPFN v2: 203
+2025-07-19 16:08:39,985 -    XGBoost_vs_TabICL: 208
+2025-07-19 16:08:39,985 -    TabPFN v2_vs_TabICL: 224
+2025-07-19 16:08:41,317 - 🔍 MODEL-SPECIFIC ERROR INSIGHTS
+2025-07-19 16:08:41,318 - ================================================================================
+2025-07-19 16:08:41,318 - 
+📊 XGBOOST ERROR ANALYSIS
+2025-07-19 16:08:41,318 - ------------------------------------------------------------
+2025-07-19 16:08:41,318 - Total Errors: 253 (10.26%)
+2025-07-19 16:08:41,318 - Unique Errors: 37 (14.6% of model errors)
+2025-07-19 16:08:41,318 - Average Confidence (Correct): 0.940
+2025-07-19 16:08:41,318 - Average Confidence (Errors): 0.767
+2025-07-19 16:08:41,318 - Low Confidence Errors: 17.0%
+2025-07-19 16:08:41,318 - Significant Feature Differences: 11/17
+2025-07-19 16:08:41,318 - Top 3 Problematic Features:
+2025-07-19 16:08:41,319 -   1. ProductRelated: 0.6888
+2025-07-19 16:08:41,319 -   2. ProductRelated_Duration: 0.6073
+2025-07-19 16:08:41,319 -   3. Administrative: 0.5784
+2025-07-19 16:08:41,319 - 
+🌳 XGBoost-Specific Insights:
+2025-07-19 16:08:41,319 -   - Tree-based errors often indicate feature interaction issues
+2025-07-19 16:08:41,319 -   - Consider feature engineering or hyperparameter tuning
+2025-07-19 16:08:41,319 -   - May benefit from ensemble methods
+2025-07-19 16:08:41,319 - 
+📊 TABPFN V2 ERROR ANALYSIS
+2025-07-19 16:08:41,319 - ------------------------------------------------------------
+2025-07-19 16:08:41,319 - Total Errors: 244 (9.89%)
+2025-07-19 16:08:41,319 - Unique Errors: 12 (4.9% of model errors)
+2025-07-19 16:08:41,320 - Average Confidence (Correct): 0.936
+2025-07-19 16:08:41,320 - Average Confidence (Errors): 0.737
+2025-07-19 16:08:41,320 - Low Confidence Errors: 27.5%
+2025-07-19 16:08:41,320 - Significant Feature Differences: 11/17
+2025-07-19 16:08:41,320 - Top 3 Problematic Features:
+2025-07-19 16:08:41,320 -   1. ProductRelated: 0.5894
+2025-07-19 16:08:41,320 -   2. PageValues: 0.5401
+2025-07-19 16:08:41,320 -   3. ProductRelated_Duration: 0.4982
+2025-07-19 16:08:41,320 - 
+🧠 TabPFN-Specific Insights:
+2025-07-19 16:08:41,320 -   - Prior-based predictions may struggle with out-of-distribution samples
+2025-07-19 16:08:41,321 -   - Consider context size optimization for better performance
+2025-07-19 16:08:41,321 -   - Errors may indicate dataset shift from pretraining distribution
+2025-07-19 16:08:41,321 - 
+📊 TABICL ERROR ANALYSIS
+2025-07-19 16:08:41,321 - ------------------------------------------------------------
+2025-07-19 16:08:41,321 - Total Errors: 248 (10.06%)
+2025-07-19 16:08:41,321 - Unique Errors: 11 (4.4% of model errors)
+2025-07-19 16:08:41,321 - Average Confidence (Correct): 0.935
+2025-07-19 16:08:41,321 - Average Confidence (Errors): 0.724
+2025-07-19 16:08:41,321 - Low Confidence Errors: 28.2%
+2025-07-19 16:08:41,321 - Significant Feature Differences: 12/17
+2025-07-19 16:08:41,322 - Top 3 Problematic Features:
+2025-07-19 16:08:41,322 -   1. ProductRelated: 0.6469
+2025-07-19 16:08:41,322 -   2. Administrative: 0.5584
+2025-07-19 16:08:41,322 -   3. PageValues: 0.5528
+2025-07-19 16:08:41,322 - 
+🎯 TabICL-Specific Insights:
+2025-07-19 16:08:41,322 -   - In-context learning errors may indicate poor example selection
+2025-07-19 16:08:41,322 -   - Consider diverse example selection strategies
+2025-07-19 16:08:41,322 -   - Context window utilization may need optimization
+2025-07-19 16:08:41,323 - 📊 Extended Error Analysis Framework Loaded
+2025-07-19 16:08:41,323 - Ready to analyze TabICL and TabPFN error patterns
+2025-07-19 16:08:41,323 - 
+============================================================
+2025-07-19 16:08:41,323 - ABLATION STUDIES
+2025-07-19 16:08:41,323 - ============================================================
+2025-07-19 16:09:12,830 - 🔬 Enhanced Ablation Studies Framework Loaded
+2025-07-19 16:09:12,830 - Ready to perform advanced ablation analysis on TabICL and TabPFN models
+2025-07-19 16:09:12,830 - 🔍 Verifying Required Resources:
+2025-07-19 16:09:12,830 -    ✅ X_train_scaled: shape (7891, 17)
+2025-07-19 16:09:12,830 -    ✅ X_test_scaled: shape (2466, 17)
+2025-07-19 16:09:12,830 -    ✅ y_train: length 7891
+2025-07-19 16:09:12,830 -    ✅ y_test: length 2466
+2025-07-19 16:09:12,830 -    ✅ feature_names: 17 features
+2025-07-19 16:09:12,830 -    ✅ models: ['XGBoost', 'TabPFN v2', 'TabICL']
+2025-07-19 16:09:12,830 -    ✅ model_names: available
+2025-07-19 16:09:12,830 - 
+📊 Models available for enhanced ablation studies: ['XGBoost', 'TabPFN v2', 'TabICL']
+2025-07-19 16:09:12,831 - 🚀 INITIALIZING ENHANCED ABLATION STUDIES
+2025-07-19 16:09:12,831 - ================================================================================
+2025-07-19 16:09:12,831 - 
+🔬 Starting enhanced ablation analysis...
+2025-07-19 16:09:12,831 - This will perform model-specific ablations for TabICL and TabPFN
+2025-07-19 16:09:12,831 - Expected duration: 5-15 minutes depending on hardware
+2025-07-19 21:26:24,010 - 
+📊 ENHANCED ABLATION STUDY SUMMARY
+2025-07-19 21:26:24,011 - ================================================================================
+2025-07-19 21:26:24,014 -        Model  Accuracy  F1_Score  Precision  Recall     AUC  Train_Time  Inference_Time Most_Important_Feature  Feature_Importance_Score  Robustness_Score
+0    XGBoost    0.8974    0.6307     0.7129  0.5654  0.9212      0.1715          0.0031             PageValues                    0.5900            0.7824
+1  TabPFN v2    0.9011    0.6494     0.7197  0.5916  0.9326      0.4512          7.0574             PageValues                    0.8040            0.7649
+2     TabICL    0.8994    0.6427     0.7147  0.5838  0.9340      0.4915         11.6507             PageValues                    0.7389            0.8454
+2025-07-19 21:26:24,014 - 
+💾 Results saved to 'enhanced_ablation_summary.csv'
+2025-07-19 21:26:24,015 - 📈 Generating Enhanced Ablation Dashboard...
+2025-07-19 21:26:25,814 - 
+🔬 TABPFN ENHANCED ABLATION ANALYSIS
+2025-07-19 21:26:25,814 - ================================================================================
+2025-07-19 21:26:25,814 - 
+📏 Context Size Optimization Results:
+2025-07-19 21:26:25,815 - Empty DataFrame
+Columns: []
+Index: []

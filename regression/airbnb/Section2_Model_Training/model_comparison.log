@@ -1,0 +1,94 @@
+2025-07-31 09:31:45,758 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 09:31:45,758 - ERROR - Error loading enhanced data: [Errno 2] No such file or directory: './Section2_Model_Training/enhanced_data.pkl'
+2025-07-31 09:31:45,763 - INFO - Basic data loaded: 9777 test samples, 13 features
+2025-07-31 09:31:45,941 - INFO - Using device: cuda
+2025-07-31 09:31:46,209 - INFO - XGBoost Enhanced (Tuned) loaded successfully
+2025-07-31 09:31:46,259 - INFO - Enhanced FT-Transformer model loaded successfully
+2025-07-31 09:31:46,332 - INFO - SAINT model loaded successfully
+2025-07-31 09:31:46,333 - INFO - Successfully loaded 3 models: ['XGBoost Enhanced', 'FT-Transformer Enhanced', 'SAINT']
+2025-07-31 09:31:46,338 - ERROR - Error generating predictions for XGBoost Enhanced: Feature shape mismatch, expected: 43, got 13
+2025-07-31 09:31:46,615 - ERROR - Error generating predictions for SAINT: CUDA out of memory. Tried to allocate 37.04 GiB. GPU 0 has a total capacity of 14.56 GiB of which 13.89 GiB is free. Including non-PyTorch memory, this process has 692.00 MiB memory in use. Of the allocated memory 401.76 MiB is allocated by PyTorch, and 164.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-07-31 09:31:46,627 - INFO - Comparison results saved
+2025-07-31 09:31:51,179 - INFO - Comprehensive visualization created and saved
+2025-07-31 09:42:51,836 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 09:42:51,837 - ERROR - Error loading enhanced data: [Errno 2] No such file or directory: './Section2_Model_Training/enhanced_data.pkl'
+2025-07-31 09:42:51,842 - INFO - Basic data loaded: 9777 test samples, 13 features
+2025-07-31 09:42:52,062 - INFO - Using device: cuda
+2025-07-31 09:42:52,063 - ERROR - Error loading Enhanced XGBoost model: Enhanced data not available
+2025-07-31 09:42:52,247 - INFO - Enhanced FT-Transformer model loaded successfully
+2025-07-31 09:42:52,327 - INFO - SAINT model loaded successfully
+2025-07-31 09:42:52,328 - INFO - Successfully loaded 2 models: ['FT-Transformer Enhanced', 'SAINT']
+2025-07-31 09:42:52,530 - ERROR - Error generating predictions for SAINT: CUDA out of memory. Tried to allocate 37.04 GiB. GPU 0 has a total capacity of 14.56 GiB of which 13.89 GiB is free. Including non-PyTorch memory, this process has 692.00 MiB memory in use. Of the allocated memory 401.76 MiB is allocated by PyTorch, and 164.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-07-31 09:42:52,541 - INFO - Comparison results saved
+2025-07-31 09:42:57,103 - INFO - Comprehensive visualization created and saved
+2025-07-31 09:44:33,820 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 09:44:33,832 - INFO - Enhanced data loaded: 9777 test samples, 43 features
+2025-07-31 09:44:34,021 - INFO - Using device: cuda
+2025-07-31 09:44:34,245 - INFO - XGBoost Enhanced (Tuned) loaded successfully
+2025-07-31 09:44:34,293 - ERROR - Error loading Enhanced FT-Transformer model: Error(s) in loading state_dict for FTTransformer:
+	size mismatch for feature_tokenizer.num_tokenizer.weight: copying a param with shape torch.Size([13, 64]) from checkpoint, the shape in current model is torch.Size([43, 64]).
+	size mismatch for feature_tokenizer.num_tokenizer.bias: copying a param with shape torch.Size([13, 64]) from checkpoint, the shape in current model is torch.Size([43, 64]).
+2025-07-31 09:44:34,364 - INFO - SAINT model loaded successfully
+2025-07-31 09:44:34,365 - INFO - Successfully loaded 2 models: ['XGBoost Enhanced', 'SAINT']
+2025-07-31 09:44:34,584 - ERROR - Error generating predictions for SAINT: The size of tensor a (43) must match the size of tensor b (13) at non-singleton dimension 1
+2025-07-31 09:44:34,595 - INFO - Comparison results saved
+2025-07-31 09:44:38,799 - INFO - Comprehensive visualization created and saved
+2025-07-31 09:47:42,054 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 09:47:42,064 - INFO - Enhanced data loaded: 9777 test samples, 43 features
+2025-07-31 09:47:42,064 - INFO - Using device: cuda
+2025-07-31 09:47:42,128 - INFO - XGBoost Enhanced (Tuned) loaded successfully
+2025-07-31 09:47:42,136 - ERROR - Error loading FT-Transformer model: Feature mismatch: model expects 13, data has 43
+2025-07-31 09:47:42,204 - INFO - SAINT model loaded successfully
+2025-07-31 09:47:42,205 - INFO - Successfully loaded 2 models: ['XGBoost Enhanced', 'SAINT']
+2025-07-31 09:47:42,334 - ERROR - Error generating predictions for SAINT: The size of tensor a (43) must match the size of tensor b (13) at non-singleton dimension 1
+2025-07-31 09:47:42,343 - INFO - Comparison results saved
+2025-07-31 09:47:46,487 - INFO - Comprehensive visualization created and saved
+2025-07-31 09:47:56,904 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 09:47:56,916 - INFO - Enhanced data loaded: 9777 test samples, 43 features
+2025-07-31 09:47:57,141 - INFO - Using device: cuda
+2025-07-31 09:47:57,363 - INFO - XGBoost Enhanced (Tuned) loaded successfully
+2025-07-31 09:47:57,405 - ERROR - Error loading FT-Transformer model: Feature mismatch: model expects 13, data has 43
+2025-07-31 09:47:57,476 - INFO - SAINT model loaded successfully
+2025-07-31 09:47:57,477 - INFO - Successfully loaded 2 models: ['XGBoost Enhanced', 'SAINT']
+2025-07-31 09:47:57,638 - ERROR - Error generating predictions for SAINT: The size of tensor a (43) must match the size of tensor b (13) at non-singleton dimension 1
+2025-07-31 09:47:57,649 - INFO - Comparison results saved
+2025-07-31 09:48:01,840 - INFO - Comprehensive visualization created and saved
+2025-07-31 11:33:32,742 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 11:33:32,757 - INFO - Enhanced data loaded: 9777 test samples, 43 features
+2025-07-31 11:33:32,961 - INFO - Using device: cuda
+2025-07-31 11:33:33,199 - INFO - XGBoost Enhanced (Tuned) loaded successfully
+2025-07-31 11:33:33,248 - INFO - FT-Transformer Enhanced loaded successfully
+2025-07-31 11:33:33,279 - INFO - SAINT Enhanced loaded successfully
+2025-07-31 11:33:33,279 - INFO - Successfully loaded 3 models: ['XGBoost Enhanced', 'FT-Transformer Enhanced', 'SAINT Enhanced']
+2025-07-31 11:33:33,788 - INFO - Comparison results saved
+2025-07-31 11:33:40,356 - INFO - Comprehensive visualization created and saved
+2025-07-31 11:35:08,077 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 11:35:08,087 - ERROR - Error loading enhanced data: 'data_summary'
+2025-07-31 11:35:08,091 - INFO - Basic data loaded: 9777 test samples, 13 features
+2025-07-31 11:35:08,091 - INFO - Using device: cuda
+2025-07-31 11:35:08,092 - ERROR - Error loading Enhanced XGBoost model: Enhanced data not available
+2025-07-31 11:35:08,099 - ERROR - Error loading FT-Transformer model: Feature mismatch: model expects 43, data has 13
+2025-07-31 11:35:08,122 - INFO - SAINT Enhanced loaded successfully
+2025-07-31 11:35:08,123 - INFO - Successfully loaded 1 models: ['SAINT Enhanced']
+2025-07-31 11:35:08,132 - ERROR - Error generating predictions for SAINT Enhanced: running_mean should contain 13 elements not 43
+2025-07-31 11:35:08,135 - INFO - Comparison results saved
+2025-07-31 11:35:48,901 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 11:35:48,913 - INFO - Enhanced data loaded: 9777 test samples, 43 features
+2025-07-31 11:35:49,125 - INFO - Using device: cuda
+2025-07-31 11:35:49,357 - INFO - XGBoost Enhanced (Tuned) loaded successfully
+2025-07-31 11:35:49,407 - INFO - FT-Transformer Enhanced loaded successfully
+2025-07-31 11:35:49,431 - INFO - SAINT Enhanced loaded successfully
+2025-07-31 11:35:49,432 - INFO - Successfully loaded 3 models: ['XGBoost Enhanced', 'FT-Transformer Enhanced', 'SAINT Enhanced']
+2025-07-31 11:35:49,918 - INFO - Comparison results saved
+2025-07-31 11:35:56,477 - INFO - Comprehensive visualization created and saved
+2025-07-31 11:37:52,278 - INFO - Starting comprehensive model comparison for Airbnb dataset
+2025-07-31 11:37:52,290 - INFO - Enhanced data loaded: 9777 test samples, 43 features
+2025-07-31 11:37:52,503 - INFO - Using device: cuda
+2025-07-31 11:37:52,730 - INFO - XGBoost Enhanced (Tuned) loaded successfully
+2025-07-31 11:37:52,780 - INFO - FT-Transformer Enhanced loaded successfully
+2025-07-31 11:37:52,804 - INFO - SAINT Enhanced loaded successfully
+2025-07-31 11:37:52,805 - INFO - Successfully loaded 3 models: ['XGBoost Enhanced', 'FT-Transformer Enhanced', 'SAINT Enhanced']
+2025-07-31 11:37:53,275 - INFO - Comparison results saved
+2025-07-31 11:37:59,765 - INFO - Comprehensive visualization created and saved
+2025-07-31 11:37:59,871 - INFO - Section 2 results saved for Section 3
+2025-07-31 11:37:59,872 - INFO - Section 2 model comparison completed successfully

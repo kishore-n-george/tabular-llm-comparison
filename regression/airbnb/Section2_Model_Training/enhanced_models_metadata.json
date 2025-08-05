@@ -1,0 +1,36 @@
+{
+  "baseline_model": {
+    "file_path": "./Section2_Model_Training/xgboost_baseline_enhanced.pkl",
+    "model_type": "XGBoost Enhanced Baseline",
+    "preprocessing": "Advanced (outlier removal, feature engineering, scaling)",
+    "hyperparameters": "Default optimized",
+    "performance": {
+      "model_name": "Baseline",
+      "r2_score": 0.13712056215434631,
+      "rmse": 185.86607357373512,
+      "mae": 56.073275275521574,
+      "mape": 30.59075812972348,
+      "explained_variance": 0.15851475485890998,
+      "max_error": 7766.737579345703,
+      "median_ae": 22.94196319580088
+    },
+    "training_date": "2025-07-30T08:31:49.726751"
+  },
+  "tuned_model": {
+    "file_path": "./Section2_Model_Training/xgboost_tuned_enhanced.pkl",
+    "model_type": "XGBoost Enhanced Tuned",
+    "preprocessing": "Advanced (outlier removal, feature engineering, scaling)",
+    "hyperparameters": "Optimized via RandomizedSearchCV + GridSearchCV",
+    "performance": {
+      "model_name": "Tuned",
+      "r2_score": 0.13671017241169037,
+      "rmse": 185.91026773309295,
+      "mae": 55.65648581536134,
+      "mape": 30.183899978468443,
+      "explained_variance": 0.15824838796460583,
+      "max_error": 7776.422988891602,
+      "median_ae": 22.281845092773438
+    },
+    "training_date": "2025-07-30T08:31:49.726802"
+  }
+}

@@ -1,0 +1,527 @@
+2025-07-28 07:24:58,845 - INFO - 🏠 Starting Airbnb Dataset Preprocessing Pipeline
+2025-07-28 07:24:58,846 - INFO - ============================================================
+2025-07-28 07:25:01,921 - INFO - ==================================================
+2025-07-28 07:25:01,922 - INFO - 1.1 DATA LOADING
+2025-07-28 07:25:01,923 - INFO - ==================================================
+2025-07-28 07:25:01,923 - INFO - Attempting to download Airbnb dataset...
+2025-07-28 07:25:01,924 - INFO - Trying to download from: Kaggle Airbnb NYC 2019
+2025-07-28 07:25:02,054 - WARNING - Failed to download from Kaggle Airbnb NYC 2019: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/dgomonov/new-york-city-airbnb-open-data/master/AB_NYC_2019.csv
+2025-07-28 07:25:02,055 - ERROR - All download sources failed. Please manually download the dataset.
+2025-07-28 07:25:02,055 - ERROR - Failed to load dataset: Could not download Airbnb dataset from any source
+2025-07-28 08:03:25,388 - INFO - 🏠 Starting Airbnb Dataset Preprocessing Pipeline
+2025-07-28 08:03:25,389 - INFO - ============================================================
+2025-07-28 08:03:27,912 - INFO - ==================================================
+2025-07-28 08:03:27,913 - INFO - 1.1 DATA LOADING
+2025-07-28 08:03:27,913 - INFO - ==================================================
+2025-07-28 08:03:27,914 - INFO - Attempting to download Airbnb dataset...
+2025-07-28 08:03:27,915 - INFO - Trying to download from: Kaggle Airbnb NYC 2019
+2025-07-28 08:03:28,048 - WARNING - Failed to download from Kaggle Airbnb NYC 2019: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/dgomonov/new-york-city-airbnb-open-data/master/AB_NYC_2019.csv
+2025-07-28 08:03:28,049 - ERROR - All download sources failed. Please manually download the dataset.
+2025-07-28 08:03:28,049 - ERROR - Failed to load dataset: Could not download Airbnb dataset from any source
+2025-07-28 08:04:56,820 - INFO - 🏠 Starting Airbnb Dataset Preprocessing Pipeline
+2025-07-28 08:04:56,822 - INFO - ============================================================
+2025-07-28 08:04:58,278 - INFO - ==================================================
+2025-07-28 08:04:58,279 - INFO - 1.1 DATA LOADING
+2025-07-28 08:04:58,279 - INFO - ==================================================
+2025-07-28 08:04:58,280 - INFO - Attempting to download Airbnb dataset...
+2025-07-28 08:04:58,281 - INFO - Trying to download from: Kaggle API - Dgomonov Airbnb NYC
+2025-07-28 08:04:59,472 - INFO - Processing Kaggle ZIP file...
+2025-07-28 08:04:59,475 - INFO - Files in ZIP: ['AB_NYC_2019.csv', 'New_York_City_.png']
+2025-07-28 08:04:59,476 - INFO - Reading CSV file: AB_NYC_2019.csv
+2025-07-28 08:04:59,648 - INFO - Successfully downloaded dataset: New York City Airbnb Open Data from Kaggle
+2025-07-28 08:04:59,649 - INFO - Dataset shape: (48895, 16)
+2025-07-28 08:04:59,650 - INFO - Dataset source: New York City Airbnb Open Data from Kaggle
+2025-07-28 08:04:59,651 - INFO - Dataset shape: (48895, 16)
+2025-07-28 08:04:59,652 - INFO - Dataset columns: ['id', 'name', 'host_id', 'host_name', 'neighbourhood_group', 'neighbourhood', 'latitude', 'longitude', 'room_type', 'price', 'minimum_nights', 'number_of_reviews', 'last_review', 'reviews_per_month', 'calculated_host_listings_count', 'availability_365']
+2025-07-28 08:04:59,652 - INFO - 
+Dataset info:
+2025-07-28 08:04:59,686 - INFO - <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 48895 entries, 0 to 48894
+Data columns (total 16 columns):
+ #   Column                          Non-Null Count  Dtype  
+---  ------                          --------------  -----  
+ 0   id                              48895 non-null  int64  
+ 1   name                            48879 non-null  object 
+ 2   host_id                         48895 non-null  int64  
+ 3   host_name                       48874 non-null  object 
+ 4   neighbourhood_group             48895 non-null  object 
+ 5   neighbourhood                   48895 non-null  object 
+ 6   latitude                        48895 non-null  float64
+ 7   longitude                       48895 non-null  float64
+ 8   room_type                       48895 non-null  object 
+ 9   price                           48895 non-null  int64  
+ 10  minimum_nights                  48895 non-null  int64  
+ 11  number_of_reviews               48895 non-null  int64  
+ 12  last_review                     38843 non-null  object 
+ 13  reviews_per_month               38843 non-null  float64
+ 14  calculated_host_listings_count  48895 non-null  int64  
+ 15  availability_365                48895 non-null  int64  
+dtypes: float64(3), int64(7), object(6)
+memory usage: 6.0+ MB
+
+2025-07-28 08:04:59,687 - INFO - 
+First 5 rows:
+2025-07-28 08:04:59,693 - INFO -      id                                              name  host_id  \
+0  2539                Clean & quiet apt home by the park     2787   
+1  2595                             Skylit Midtown Castle     2845   
+2  3647               THE VILLAGE OF HARLEM....NEW YORK !     4632   
+3  3831                   Cozy Entire Floor of Brownstone     4869   
+4  5022  Entire Apt: Spacious Studio/Loft by central park     7192   
+
+     host_name neighbourhood_group neighbourhood  latitude  longitude  \
+0         John            Brooklyn    Kensington  40.64749  -73.97237   
+1     Jennifer           Manhattan       Midtown  40.75362  -73.98377   
+2    Elisabeth           Manhattan        Harlem  40.80902  -73.94190   
+3  LisaRoxanne            Brooklyn  Clinton Hill  40.68514  -73.95976   
+4        Laura           Manhattan   East Harlem  40.79851  -73.94399   
+
+         room_type  price  minimum_nights  number_of_reviews last_review  \
+0     Private room    149               1                  9  2018-10-19   
+1  Entire home/apt    225               1                 45  2019-05-21   
+2     Private room    150               3                  0         NaN   
+3  Entire home/apt     89               1                270  2019-07-05   
+4  Entire home/apt     80              10                  9  2018-11-19   
+
+   reviews_per_month  calculated_host_listings_count  availability_365  
+0               0.21                               6               365  
+1               0.38                               2               355  
+2                NaN                               1               365  
+3               4.64                               1               194  
+4               0.10                               1                 0  
+2025-07-28 08:05:11,870 - INFO - Identifying target variable for regression task...
+2025-07-28 08:05:11,871 - INFO - Target variable identified: price
+2025-07-28 08:05:11,871 - INFO - Cleaning target variable: price
+2025-07-28 08:05:11,881 - INFO - Removed 11 rows with invalid prices
+2025-07-28 08:05:11,882 - INFO - Final dataset shape: (48884, 16)
+2025-07-28 08:05:15,082 - INFO - ==================================================
+2025-07-28 08:05:15,083 - INFO - TARGET VARIABLE ANALYSIS
+2025-07-28 08:05:15,084 - INFO - ==================================================
+2025-07-28 08:05:15,085 - INFO - Target variable (price) statistics:
+2025-07-28 08:05:15,094 - INFO - count    48884.000000
+mean       152.755053
+std        240.170260
+min         10.000000
+25%         69.000000
+50%        106.000000
+75%        175.000000
+max      10000.000000
+Name: price, dtype: float64
+2025-07-28 08:05:15,095 - INFO - 
+Target variable range:
+2025-07-28 08:05:15,095 - INFO -   Minimum: 10
+2025-07-28 08:05:15,096 - INFO -   Maximum: 10000
+2025-07-28 08:05:15,097 - INFO -   Mean: 152.76
+2025-07-28 08:05:15,098 - INFO -   Median: 106.00
+2025-07-28 08:05:15,099 - INFO -   Standard deviation: 240.17
+2025-07-28 08:05:15,104 - INFO - 
+Outliers (using IQR method): 2972 samples (6.08%)
+2025-07-28 08:05:32,344 - INFO - ==================================================
+2025-07-28 08:05:32,345 - INFO - 1.2 FEATURE ANALYSIS
+2025-07-28 08:05:32,346 - INFO - ==================================================
+2025-07-28 08:05:32,347 - INFO - Number of features: 15
+2025-07-28 08:05:32,461 - INFO - 
+Numerical features (7):
+2025-07-28 08:05:32,461 - INFO -    1. latitude
+2025-07-28 08:05:32,462 - INFO -    2. longitude
+2025-07-28 08:05:32,462 - INFO -    3. minimum_nights
+2025-07-28 08:05:32,463 - INFO -    4. number_of_reviews
+2025-07-28 08:05:32,463 - INFO -    5. reviews_per_month
+2025-07-28 08:05:32,464 - INFO -    6. calculated_host_listings_count
+2025-07-28 08:05:32,464 - INFO -    7. availability_365
+2025-07-28 08:05:32,465 - INFO - 
+Categorical features (6):
+2025-07-28 08:05:32,466 - INFO -    1. name
+2025-07-28 08:05:32,466 - INFO -    2. host_name
+2025-07-28 08:05:32,467 - INFO -    3. neighbourhood_group
+2025-07-28 08:05:32,467 - INFO -    4. neighbourhood
+2025-07-28 08:05:32,468 - INFO -    5. room_type
+2025-07-28 08:05:32,468 - INFO -    6. last_review
+2025-07-28 08:05:32,469 - INFO - 
+Text features (0) - will be excluded:
+2025-07-28 08:05:32,470 - INFO - 
+ID features (2) - will be excluded:
+2025-07-28 08:05:32,470 - INFO -    1. id
+2025-07-28 08:05:32,471 - INFO -    2. host_id
+2025-07-28 08:05:32,471 - INFO - 
+Datetime features (0) - will be processed separately:
+2025-07-28 08:05:36,243 - INFO - ==================================================
+2025-07-28 08:05:36,245 - INFO - 1.3 DATA VISUALIZATION
+2025-07-28 08:05:36,245 - INFO - ==================================================
+2025-07-28 08:05:45,153 - INFO - Visualizations saved successfully
+2025-07-28 08:06:02,793 - INFO - ==================================================
+2025-07-28 08:06:02,794 - INFO - 1.4 DATA PREPROCESSING
+2025-07-28 08:06:02,795 - INFO - ==================================================
+2025-07-28 08:06:02,798 - INFO - Dropping columns: ['id', 'host_id']
+2025-07-28 08:06:02,802 - INFO - Handling missing values...
+2025-07-28 08:06:02,806 - INFO - Filled reviews_per_month missing values with median: 0.72
+2025-07-28 08:06:02,838 - INFO - Filled name missing values with mode: Hillside Hotel
+2025-07-28 08:06:02,854 - INFO - Filled host_name missing values with mode: Michael
+2025-07-28 08:06:02,872 - INFO - Filled last_review missing values with mode: 2019-06-23
+2025-07-28 08:06:02,955 - INFO - Encoded categorical feature: name
+2025-07-28 08:06:02,979 - INFO - Encoded categorical feature: host_name
+2025-07-28 08:06:02,987 - INFO - Encoded categorical feature: neighbourhood_group
+2025-07-28 08:06:02,996 - INFO - Encoded categorical feature: neighbourhood
+2025-07-28 08:06:03,005 - INFO - Encoded categorical feature: room_type
+2025-07-28 08:06:03,016 - INFO - Encoded categorical feature: last_review
+2025-07-28 08:06:03,016 - INFO - Dataset shape after preprocessing: (48884, 14)
+2025-07-28 08:06:03,017 - INFO - Shape change: (48884, 14) -> (48884, 14)
+2025-07-28 08:06:03,017 - INFO - Final feature names (13 features):
+2025-07-28 08:06:03,018 - INFO -    1. name
+2025-07-28 08:06:03,019 - INFO -    2. host_name
+2025-07-28 08:06:03,019 - INFO -    3. neighbourhood_group
+2025-07-28 08:06:03,020 - INFO -    4. neighbourhood
+2025-07-28 08:06:03,020 - INFO -    5. latitude
+2025-07-28 08:06:03,021 - INFO -    6. longitude
+2025-07-28 08:06:03,022 - INFO -    7. room_type
+2025-07-28 08:06:03,022 - INFO -    8. minimum_nights
+2025-07-28 08:06:03,023 - INFO -    9. number_of_reviews
+2025-07-28 08:06:03,023 - INFO -   10. last_review
+2025-07-28 08:06:03,024 - INFO -   11. reviews_per_month
+2025-07-28 08:06:03,024 - INFO -   12. calculated_host_listings_count
+2025-07-28 08:06:03,025 - INFO -   13. availability_365
+2025-07-28 08:06:04,828 - INFO - 
+==================================================
+2025-07-28 08:06:04,829 - INFO - 1.5 FEATURE-TARGET SEPARATION
+2025-07-28 08:06:04,829 - INFO - ==================================================
+2025-07-28 08:06:04,834 - INFO - Features shape: (48884, 13)
+2025-07-28 08:06:04,835 - INFO - Target shape: (48884,)
+2025-07-28 08:06:04,835 - INFO - Target type: Continuous (regression)
+2025-07-28 08:06:04,836 - INFO - Target range: [10.00, 10000.00]
+2025-07-28 08:06:04,837 - INFO - 
+Feature value ranges (first 5 features):
+2025-07-28 08:06:04,838 - INFO -   name: [0.00, 47893.00]
+2025-07-28 08:06:04,839 - INFO -   host_name: [0.00, 11449.00]
+2025-07-28 08:06:04,840 - INFO -   neighbourhood_group: [0.00, 4.00]
+2025-07-28 08:06:04,840 - INFO -   neighbourhood: [0.00, 220.00]
+2025-07-28 08:06:04,841 - INFO -   latitude: [40.50, 40.91]
+2025-07-28 08:06:04,842 - INFO -   ...
+2025-07-28 08:06:06,536 - INFO - 
+==================================================
+2025-07-28 08:06:06,537 - INFO - 1.6 DATA SPLITTING
+2025-07-28 08:06:06,538 - INFO - ==================================================
+2025-07-28 08:06:06,552 - INFO - Training set: (31285, 13)
+2025-07-28 08:06:06,552 - INFO - Validation set: (7822, 13)
+2025-07-28 08:06:06,553 - INFO - Test set: (9777, 13)
+2025-07-28 08:06:06,553 - INFO - 
+Target distribution in splits:
+2025-07-28 08:06:06,555 - INFO - Training:   Mean=153.34, Std=258.18, Range=[10.00, 10000.00]
+2025-07-28 08:06:06,556 - INFO - Validation: Mean=152.52, Std=209.34, Range=[10.00, 7703.00]
+2025-07-28 08:06:06,557 - INFO - Test:       Mean=151.06, Std=200.09, Range=[10.00, 8000.00]
+2025-07-28 08:06:06,557 - INFO - 
+Data split proportions:
+2025-07-28 08:06:06,558 - INFO -   Training:   31285 samples (64.0%)
+2025-07-28 08:06:06,558 - INFO -   Validation: 7822 samples (16.0%)
+2025-07-28 08:06:06,559 - INFO -   Test:       9777 samples (20.0%)
+2025-07-28 08:06:08,141 - INFO - 
+==================================================
+2025-07-28 08:06:08,142 - INFO - 1.7 FEATURE SCALING
+2025-07-28 08:06:08,142 - INFO - ==================================================
+2025-07-28 08:06:08,152 - INFO - Scaled training set: (31285, 13)
+2025-07-28 08:06:08,152 - INFO - Scaled validation set: (7822, 13)
+2025-07-28 08:06:08,153 - INFO - Scaled test set: (9777, 13)
+2025-07-28 08:06:08,153 - INFO - 
+Scaling verification (training set):
+2025-07-28 08:06:08,155 - INFO -   Mean (should be ~0): [-8.64401868e-17  8.78454875e-17 -3.25817898e-15]...
+2025-07-28 08:06:08,160 - INFO -   Std (should be ~1):  [1. 1. 1.]...
+2025-07-28 08:06:08,161 - INFO - 
+Scaling effect on sample features:
+2025-07-28 08:06:08,161 - INFO -   name:
+2025-07-28 08:06:08,163 - INFO -     Original range: [2.00, 47892.00]
+2025-07-28 08:06:08,163 - INFO -     Scaled range:   [-1.73, 1.73]
+2025-07-28 08:06:08,164 - INFO -   host_name:
+2025-07-28 08:06:08,165 - INFO -     Original range: [1.00, 11448.00]
+2025-07-28 08:06:08,166 - INFO -     Scaled range:   [-1.69, 1.86]
+2025-07-28 08:06:08,166 - INFO -   neighbourhood_group:
+2025-07-28 08:06:08,167 - INFO -     Original range: [0.00, 4.00]
+2025-07-28 08:06:08,168 - INFO -     Scaled range:   [-2.28, 3.17]
+2025-07-28 08:06:11,433 - INFO - 
+==================================================
+2025-07-28 08:06:11,434 - INFO - 1.8 DATA SUMMARY AND EXPORT
+2025-07-28 08:06:11,434 - INFO - ==================================================
+2025-07-28 08:06:11,436 - INFO - 📊 DATA PREPROCESSING SUMMARY
+2025-07-28 08:06:11,437 - INFO - ==================================================
+2025-07-28 08:06:11,437 - INFO - Dataset: Airbnb NYC Dataset
+2025-07-28 08:06:11,438 - INFO - Total Samples: 48,884
+2025-07-28 08:06:11,438 - INFO - Features: 13
+2025-07-28 08:06:11,439 - INFO - Task Type: Regression
+2025-07-28 08:06:11,439 - INFO - Target Variable: price
+2025-07-28 08:06:11,440 - INFO - Target Range: [10.00, 10000.00]
+2025-07-28 08:06:11,440 - INFO - Target Mean: 152.76
+2025-07-28 08:06:11,441 - INFO - Target Std: 240.17
+2025-07-28 08:06:11,442 - INFO - 
+Data Splits:
+2025-07-28 08:06:11,442 - INFO -   Training:   31,285 (64.0%)
+2025-07-28 08:06:11,443 - INFO -   Validation: 7,822 (16.0%)
+2025-07-28 08:06:11,443 - INFO -   Test:       9,777 (20.0%)
+2025-07-28 08:06:11,444 - INFO - 
+Target Distribution:
+2025-07-28 08:06:11,444 - INFO -   Train Mean: 153.34
+2025-07-28 08:06:11,445 - INFO -   Val Mean: 152.52
+2025-07-28 08:06:11,445 - INFO -   Test Mean: 151.06
+2025-07-28 08:06:11,446 - INFO - 
+✅ Data preprocessing completed successfully!
+2025-07-28 08:06:11,447 - INFO - 📁 Ready for model training in Section 2
+2025-07-28 08:06:11,447 - INFO - ==================================================
+2025-07-28 08:06:11,448 - INFO - 1.7 DATA SUMMARY AND EXPORT
+2025-07-28 08:06:11,449 - INFO - ==================================================
+2025-07-28 08:06:11,453 - INFO - 💾 Preprocessed data saved to './Section1_Data_PreProcessing/airbnb_preprocessed_data.pkl'
+2025-07-28 08:06:12,175 - INFO - 📄 Training data also saved as './Section1_Data_PreProcessing/airbnb_train_scaled.csv'
+2025-07-28 08:06:12,176 - INFO - 📊 DATA PREPROCESSING SUMMARY
+2025-07-28 08:06:12,176 - INFO - ==================================================
+2025-07-28 08:06:12,177 - INFO - Dataset: Airbnb NYC Dataset
+2025-07-28 08:06:12,178 - INFO - Total Samples: 48,884
+2025-07-28 08:06:12,178 - INFO - Features: 13
+2025-07-28 08:06:12,178 - INFO - Task Type: Regression
+2025-07-28 08:06:12,179 - INFO - Target Variable: price
+2025-07-28 08:06:12,179 - INFO - Target Range: [10.0, 10000.0]
+2025-07-28 08:06:12,180 - INFO - Target Mean: 152.76
+2025-07-28 08:06:12,180 - INFO - Target Std: 240.17
+2025-07-28 08:06:12,181 - INFO - ✅ Data preprocessing completed successfully!
+2025-07-28 08:06:12,181 - INFO - 📁 Ready for model training in Section 2
+2025-07-28 08:06:17,879 - INFO - 
+🎉 Preprocessing pipeline completed successfully!
+2025-07-28 08:06:17,880 - INFO - 📊 Data is ready for XGBoost, FT-Transformer, SAINT, and TabTransformer model training
+2025-07-31 15:32:44,663 - INFO - 🏠 Starting Airbnb Dataset Preprocessing Pipeline
+2025-07-31 15:32:44,663 - INFO - ============================================================
+2025-07-31 15:32:44,663 - INFO - ==================================================
+2025-07-31 15:32:44,663 - INFO - 1.1 DATA LOADING
+2025-07-31 15:32:44,663 - INFO - ==================================================
+2025-07-31 15:32:44,663 - INFO - Attempting to download Airbnb dataset...
+2025-07-31 15:32:44,663 - INFO - Trying to download from: Kaggle API - Dgomonov Airbnb NYC
+2025-07-31 15:32:46,709 - INFO - Processing Kaggle ZIP file...
+2025-07-31 15:32:46,739 - INFO - Files in ZIP: ['AB_NYC_2019.csv', 'New_York_City_.png']
+2025-07-31 15:32:46,739 - INFO - Reading CSV file: AB_NYC_2019.csv
+2025-07-31 15:32:46,836 - INFO - Successfully downloaded dataset: New York City Airbnb Open Data from Kaggle
+2025-07-31 15:32:46,836 - INFO - Dataset shape: (48895, 16)
+2025-07-31 15:32:46,837 - INFO - Dataset source: New York City Airbnb Open Data from Kaggle
+2025-07-31 15:32:46,837 - INFO - Dataset shape: (48895, 16)
+2025-07-31 15:32:46,837 - INFO - Dataset columns: ['id', 'name', 'host_id', 'host_name', 'neighbourhood_group', 'neighbourhood', 'latitude', 'longitude', 'room_type', 'price', 'minimum_nights', 'number_of_reviews', 'last_review', 'reviews_per_month', 'calculated_host_listings_count', 'availability_365']
+2025-07-31 15:32:46,837 - INFO - 
+Dataset info:
+2025-07-31 15:32:46,844 - INFO - <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 48895 entries, 0 to 48894
+Data columns (total 16 columns):
+ #   Column                          Non-Null Count  Dtype  
+---  ------                          --------------  -----  
+ 0   id                              48895 non-null  int64  
+ 1   name                            48879 non-null  object 
+ 2   host_id                         48895 non-null  int64  
+ 3   host_name                       48874 non-null  object 
+ 4   neighbourhood_group             48895 non-null  object 
+ 5   neighbourhood                   48895 non-null  object 
+ 6   latitude                        48895 non-null  float64
+ 7   longitude                       48895 non-null  float64
+ 8   room_type                       48895 non-null  object 
+ 9   price                           48895 non-null  int64  
+ 10  minimum_nights                  48895 non-null  int64  
+ 11  number_of_reviews               48895 non-null  int64  
+ 12  last_review                     38843 non-null  object 
+ 13  reviews_per_month               38843 non-null  float64
+ 14  calculated_host_listings_count  48895 non-null  int64  
+ 15  availability_365                48895 non-null  int64  
+dtypes: float64(3), int64(7), object(6)
+memory usage: 6.0+ MB
+
+2025-07-31 15:32:46,844 - INFO - 
+First 5 rows:
+2025-07-31 15:32:46,856 - INFO -      id                                              name  ...  calculated_host_listings_count availability_365
+0  2539                Clean & quiet apt home by the park  ...                               6              365
+1  2595                             Skylit Midtown Castle  ...                               2              355
+2  3647               THE VILLAGE OF HARLEM....NEW YORK !  ...                               1              365
+3  3831                   Cozy Entire Floor of Brownstone  ...                               1              194
+4  5022  Entire Apt: Spacious Studio/Loft by central park  ...                               1                0
+
+[5 rows x 16 columns]
+2025-07-31 15:32:46,856 - INFO - Identifying target variable for regression task...
+2025-07-31 15:32:46,856 - INFO - Target variable identified: price
+2025-07-31 15:32:46,856 - INFO - Cleaning target variable: price
+2025-07-31 15:32:46,859 - INFO - Removed 11 rows with invalid prices
+2025-07-31 15:32:46,859 - INFO - Final dataset shape: (48884, 16)
+2025-07-31 15:32:46,860 - INFO - ==================================================
+2025-07-31 15:32:46,860 - INFO - TARGET VARIABLE ANALYSIS
+2025-07-31 15:32:46,860 - INFO - ==================================================
+2025-07-31 15:32:46,860 - INFO - Target variable (price) statistics:
+2025-07-31 15:32:46,861 - INFO - count    48884.000000
+mean       152.755053
+std        240.170260
+min         10.000000
+25%         69.000000
+50%        106.000000
+75%        175.000000
+max      10000.000000
+Name: price, dtype: float64
+2025-07-31 15:32:46,861 - INFO - 
+Target variable range:
+2025-07-31 15:32:46,861 - INFO -   Minimum: 10
+2025-07-31 15:32:46,861 - INFO -   Maximum: 10000
+2025-07-31 15:32:46,861 - INFO -   Mean: 152.76
+2025-07-31 15:32:46,862 - INFO -   Median: 106.00
+2025-07-31 15:32:46,862 - INFO -   Standard deviation: 240.17
+2025-07-31 15:32:46,863 - INFO - 
+Outliers (using IQR method): 2972 samples (6.08%)
+2025-07-31 15:32:46,863 - INFO - ==================================================
+2025-07-31 15:32:46,863 - INFO - 1.2 FEATURE ANALYSIS
+2025-07-31 15:32:46,863 - INFO - ==================================================
+2025-07-31 15:32:46,863 - INFO - Number of features: 15
+2025-07-31 15:32:46,905 - INFO - 
+Numerical features (7):
+2025-07-31 15:32:46,905 - INFO -    1. latitude
+2025-07-31 15:32:46,905 - INFO -    2. longitude
+2025-07-31 15:32:46,905 - INFO -    3. minimum_nights
+2025-07-31 15:32:46,905 - INFO -    4. number_of_reviews
+2025-07-31 15:32:46,905 - INFO -    5. reviews_per_month
+2025-07-31 15:32:46,905 - INFO -    6. calculated_host_listings_count
+2025-07-31 15:32:46,905 - INFO -    7. availability_365
+2025-07-31 15:32:46,905 - INFO - 
+Categorical features (6):
+2025-07-31 15:32:46,905 - INFO -    1. name
+2025-07-31 15:32:46,905 - INFO -    2. host_name
+2025-07-31 15:32:46,905 - INFO -    3. neighbourhood_group
+2025-07-31 15:32:46,905 - INFO -    4. neighbourhood
+2025-07-31 15:32:46,905 - INFO -    5. room_type
+2025-07-31 15:32:46,905 - INFO -    6. last_review
+2025-07-31 15:32:46,905 - INFO - 
+Text features (0) - will be excluded:
+2025-07-31 15:32:46,905 - INFO - 
+ID features (2) - will be excluded:
+2025-07-31 15:32:46,905 - INFO -    1. id
+2025-07-31 15:32:46,905 - INFO -    2. host_id
+2025-07-31 15:32:46,905 - INFO - 
+Datetime features (0) - will be processed separately:
+2025-07-31 15:32:46,905 - INFO - ==================================================
+2025-07-31 15:32:46,905 - INFO - 1.3 DATA VISUALIZATION
+2025-07-31 15:32:46,905 - INFO - ==================================================
+2025-07-31 15:33:19,678 - INFO - Visualizations saved successfully
+2025-07-31 15:33:19,679 - INFO - ==================================================
+2025-07-31 15:33:19,680 - INFO - 1.4 DATA PREPROCESSING
+2025-07-31 15:33:19,680 - INFO - ==================================================
+2025-07-31 15:33:19,683 - INFO - Dropping columns: ['id', 'host_id']
+2025-07-31 15:33:19,689 - INFO - Handling missing values...
+2025-07-31 15:33:19,693 - INFO - Filled reviews_per_month missing values with median: 0.72
+2025-07-31 15:33:19,712 - INFO - Filled name missing values with mode: Hillside Hotel
+2025-07-31 15:33:19,721 - INFO - Filled host_name missing values with mode: Michael
+2025-07-31 15:33:19,729 - INFO - Filled last_review missing values with mode: 2019-06-23
+2025-07-31 15:33:19,774 - INFO - Encoded categorical feature: name
+2025-07-31 15:33:19,785 - INFO - Encoded categorical feature: host_name
+2025-07-31 15:33:19,788 - INFO - Encoded categorical feature: neighbourhood_group
+2025-07-31 15:33:19,792 - INFO - Encoded categorical feature: neighbourhood
+2025-07-31 15:33:19,795 - INFO - Encoded categorical feature: room_type
+2025-07-31 15:33:19,799 - INFO - Encoded categorical feature: last_review
+2025-07-31 15:33:19,799 - INFO - Dataset shape after preprocessing: (48884, 14)
+2025-07-31 15:33:19,799 - INFO - Shape change: (48884, 14) -> (48884, 14)
+2025-07-31 15:33:19,799 - INFO - Final feature names (13 features):
+2025-07-31 15:33:19,799 - INFO -    1. name
+2025-07-31 15:33:19,799 - INFO -    2. host_name
+2025-07-31 15:33:19,799 - INFO -    3. neighbourhood_group
+2025-07-31 15:33:19,799 - INFO -    4. neighbourhood
+2025-07-31 15:33:19,799 - INFO -    5. latitude
+2025-07-31 15:33:19,799 - INFO -    6. longitude
+2025-07-31 15:33:19,799 - INFO -    7. room_type
+2025-07-31 15:33:19,799 - INFO -    8. minimum_nights
+2025-07-31 15:33:19,799 - INFO -    9. number_of_reviews
+2025-07-31 15:33:19,799 - INFO -   10. last_review
+2025-07-31 15:33:19,799 - INFO -   11. reviews_per_month
+2025-07-31 15:33:19,799 - INFO -   12. calculated_host_listings_count
+2025-07-31 15:33:19,799 - INFO -   13. availability_365
+2025-07-31 15:33:19,799 - INFO - 
+==================================================
+2025-07-31 15:33:19,799 - INFO - 1.5 FEATURE-TARGET SEPARATION
+2025-07-31 15:33:19,799 - INFO - ==================================================
+2025-07-31 15:33:19,801 - INFO - Features shape: (48884, 13)
+2025-07-31 15:33:19,801 - INFO - Target shape: (48884,)
+2025-07-31 15:33:19,801 - INFO - Target type: Continuous (regression)
+2025-07-31 15:33:19,801 - INFO - Target range: [10.00, 10000.00]
+2025-07-31 15:33:19,801 - INFO - 
+Feature value ranges (first 5 features):
+2025-07-31 15:33:19,801 - INFO -   name: [0.00, 47893.00]
+2025-07-31 15:33:19,801 - INFO -   host_name: [0.00, 11449.00]
+2025-07-31 15:33:19,801 - INFO -   neighbourhood_group: [0.00, 4.00]
+2025-07-31 15:33:19,801 - INFO -   neighbourhood: [0.00, 220.00]
+2025-07-31 15:33:19,801 - INFO -   latitude: [40.50, 40.91]
+2025-07-31 15:33:19,801 - INFO -   ...
+2025-07-31 15:33:19,801 - INFO - 
+==================================================
+2025-07-31 15:33:19,801 - INFO - 1.6 DATA SPLITTING
+2025-07-31 15:33:19,801 - INFO - ==================================================
+2025-07-31 15:33:19,804 - INFO - Training set: (31285, 13)
+2025-07-31 15:33:19,804 - INFO - Validation set: (7822, 13)
+2025-07-31 15:33:19,804 - INFO - Test set: (9777, 13)
+2025-07-31 15:33:19,804 - INFO - 
+Target distribution in splits:
+2025-07-31 15:33:19,804 - INFO - Training:   Mean=153.34, Std=258.18, Range=[10.00, 10000.00]
+2025-07-31 15:33:19,804 - INFO - Validation: Mean=152.52, Std=209.34, Range=[10.00, 7703.00]
+2025-07-31 15:33:19,804 - INFO - Test:       Mean=151.06, Std=200.09, Range=[10.00, 8000.00]
+2025-07-31 15:33:19,804 - INFO - 
+Data split proportions:
+2025-07-31 15:33:19,804 - INFO -   Training:   31285 samples (64.0%)
+2025-07-31 15:33:19,804 - INFO -   Validation: 7822 samples (16.0%)
+2025-07-31 15:33:19,804 - INFO -   Test:       9777 samples (20.0%)
+2025-07-31 15:33:19,804 - INFO - 
+==================================================
+2025-07-31 15:33:19,804 - INFO - 1.7 FEATURE SCALING
+2025-07-31 15:33:19,804 - INFO - ==================================================
+2025-07-31 15:33:19,807 - INFO - Scaled training set: (31285, 13)
+2025-07-31 15:33:19,807 - INFO - Scaled validation set: (7822, 13)
+2025-07-31 15:33:19,807 - INFO - Scaled test set: (9777, 13)
+2025-07-31 15:33:19,807 - INFO - 
+Scaling verification (training set):
+2025-07-31 15:33:19,808 - INFO -   Mean (should be ~0): [-8.64401868e-17  8.78454875e-17 -3.25817898e-15]...
+2025-07-31 15:33:19,808 - INFO -   Std (should be ~1):  [1. 1. 1.]...
+2025-07-31 15:33:19,809 - INFO - 
+Scaling effect on sample features:
+2025-07-31 15:33:19,809 - INFO -   name:
+2025-07-31 15:33:19,809 - INFO -     Original range: [2.00, 47892.00]
+2025-07-31 15:33:19,809 - INFO -     Scaled range:   [-1.73, 1.73]
+2025-07-31 15:33:19,809 - INFO -   host_name:
+2025-07-31 15:33:19,809 - INFO -     Original range: [1.00, 11448.00]
+2025-07-31 15:33:19,809 - INFO -     Scaled range:   [-1.69, 1.86]
+2025-07-31 15:33:19,809 - INFO -   neighbourhood_group:
+2025-07-31 15:33:19,809 - INFO -     Original range: [0.00, 4.00]
+2025-07-31 15:33:19,809 - INFO -     Scaled range:   [-2.28, 3.17]
+2025-07-31 16:40:17,537 - INFO - 
+==================================================
+2025-07-31 16:40:17,539 - INFO - 1.8 DATA SUMMARY AND EXPORT
+2025-07-31 16:40:17,539 - INFO - ==================================================
+2025-07-31 16:40:17,541 - INFO - 📊 DATA PREPROCESSING SUMMARY
+2025-07-31 16:40:17,541 - INFO - ==================================================
+2025-07-31 16:40:17,541 - INFO - Dataset: Airbnb NYC Dataset
+2025-07-31 16:40:17,541 - INFO - Total Samples: 48,884
+2025-07-31 16:40:17,541 - INFO - Features: 13
+2025-07-31 16:40:17,541 - INFO - Task Type: Regression
+2025-07-31 16:40:17,541 - INFO - Target Variable: price
+2025-07-31 16:40:17,541 - INFO - Target Range: [10.00, 10000.00]
+2025-07-31 16:40:17,542 - INFO - Target Mean: 152.76
+2025-07-31 16:40:17,542 - INFO - Target Std: 240.17
+2025-07-31 16:40:17,542 - INFO - 
+Data Splits:
+2025-07-31 16:40:17,542 - INFO -   Training:   31,285 (64.0%)
+2025-07-31 16:40:17,542 - INFO -   Validation: 7,822 (16.0%)
+2025-07-31 16:40:17,542 - INFO -   Test:       9,777 (20.0%)
+2025-07-31 16:40:17,542 - INFO - 
+Target Distribution:
+2025-07-31 16:40:17,542 - INFO -   Train Mean: 153.34
+2025-07-31 16:40:17,542 - INFO -   Val Mean: 152.52
+2025-07-31 16:40:17,542 - INFO -   Test Mean: 151.06
+2025-07-31 16:40:17,542 - INFO - 
+✅ Data preprocessing completed successfully!
+2025-07-31 16:40:17,543 - INFO - 📁 Ready for model training in Section 2
+2025-07-31 16:40:17,543 - INFO - ==================================================
+2025-07-31 16:40:17,543 - INFO - 1.7 DATA SUMMARY AND EXPORT
+2025-07-31 16:40:17,543 - INFO - ==================================================
+2025-07-31 16:40:17,552 - INFO - 💾 Preprocessed data saved to './Section1_Data_PreProcessing/airbnb_preprocessed_data.pkl'
+2025-07-31 16:40:17,784 - INFO - 📄 Training data also saved as './Section1_Data_PreProcessing/airbnb_train_scaled.csv'
+2025-07-31 16:40:17,784 - INFO - 📊 DATA PREPROCESSING SUMMARY
+2025-07-31 16:40:17,784 - INFO - ==================================================
+2025-07-31 16:40:17,784 - INFO - Dataset: Airbnb NYC Dataset
+2025-07-31 16:40:17,784 - INFO - Total Samples: 48,884
+2025-07-31 16:40:17,784 - INFO - Features: 13
+2025-07-31 16:40:17,784 - INFO - Task Type: Regression
+2025-07-31 16:40:17,785 - INFO - Target Variable: price
+2025-07-31 16:40:17,785 - INFO - Target Range: [10.0, 10000.0]
+2025-07-31 16:40:17,785 - INFO - Target Mean: 152.76
+2025-07-31 16:40:17,785 - INFO - Target Std: 240.17
+2025-07-31 16:40:17,785 - INFO - ✅ Data preprocessing completed successfully!
+2025-07-31 16:40:17,785 - INFO - 📁 Ready for model training in Section 2
+2025-07-31 16:40:17,785 - INFO - 
+🎉 Preprocessing pipeline completed successfully!
+2025-07-31 16:40:17,785 - INFO - 📊 Data is ready for XGBoost, FT-Transformer, SAINT, and TabTransformer model training

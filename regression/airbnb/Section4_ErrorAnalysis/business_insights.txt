@@ -1,0 +1,17 @@
+AIRBNB PRICE PREDICTION - ERROR ANALYSIS INSIGHTS
+============================================================
+
+Best Model: XGBoost Enhanced
+Improvement over worst model: 9.8%
+
+Model Ranking:
+  1. XGBoost Enhanced: R²=0.5939
+  2. SAINT Enhanced: R²=0.5510
+  3. FT-Transformer Enhanced: R²=0.5009
+
+Most Problematic Features:
+  1. number_of_reviews: 0.154
+  2. reviews_per_month: 0.110
+  3. longitude_binned: 0.109
+  4. room_type: 0.108
+  5. availability_365: 0.099

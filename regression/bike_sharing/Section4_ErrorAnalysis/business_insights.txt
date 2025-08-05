@@ -1,0 +1,17 @@
+BIKE SHARING DEMAND PREDICTION - ERROR ANALYSIS INSIGHTS
+============================================================
+
+Best Model: XGBoost
+Improvement over worst model: 18.5%
+
+Model Ranking:
+  1. XGBoost: R²=0.9546
+  2. Improved FT-Transformer: R²=0.9385
+  3. SAINT: R²=0.9316
+
+Most Problematic Features:
+  1. hr: 0.430
+  2. temp: 0.426
+  3. atemp: 0.425
+  4. instant: 0.380
+  5. yr: 0.313

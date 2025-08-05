@@ -1,0 +1,14 @@
+feature,importance
+room_type,0.13514143
+minimum_nights,0.1051627
+latitude,0.0827964
+last_review,0.08257545
+neighbourhood,0.07857892
+calculated_host_listings_count,0.078066364
+longitude,0.07553527
+host_name,0.073114194
+availability_365,0.07291035
+name,0.07100333
+number_of_reviews,0.05154469
+reviews_per_month,0.049655754
+neighbourhood_group,0.04391517
